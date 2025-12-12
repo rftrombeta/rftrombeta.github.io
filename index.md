@@ -14,7 +14,7 @@
 
 ### 🌐 **Meus links**
 🔗 [**GitHub**](https://github.com/rftrombeta)  
-🔗 [**LinkedIn**](https://linkedin.com/in/)  
+🔗 [**LinkedIn**](https://www.linkedin.com/in/rodrigo-trombeta-21b89252/)  
 📧 **Seu e-mail aqui**
 
 ---
