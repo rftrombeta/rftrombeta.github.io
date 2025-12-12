@@ -97,3 +97,25 @@ body {
     color: #cbd5e1;
     margin-top: 40px;
 }
+
+/* CONTATO */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    background: #1e293b;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    font-size: 16px;
+}
+
+.contact-item:hover {
+    background: #334155;
+}
