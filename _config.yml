@@ -1,0 +1,8 @@
+title: "Portfólio de QA - Rf Trombeta"
+description: "QA Senior | Automação | Python | Robot Framework | Playwright | IA"
+theme: none
+
+markdown: kramdown
+highlighter: rouge
+exclude:
+  - README.md
