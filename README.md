@@ -15,7 +15,7 @@ especializado em automação de testes, definição de estratégias de qualidade
 e liderança técnica de times de QA.
 
 Atuo com automação de testes Web, API e Mobile utilizando Python, Robot
-Framework, Playwright, Java e ferramentas modernas de CI/CD. Tenho forte
+Framework, TypeScript/Node, Playwright, Java e ferramentas modernas de CI/CD. Tenho forte
 experiência na criação de frameworks de automação, bibliotecas reutilizáveis
 e na integração de testes automatizados aos pipelines de entrega contínua.
 
