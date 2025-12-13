@@ -10,15 +10,18 @@ Sou **QA Senior**, com forte atuação em **automação de testes**, **qualidade
 
 ## 🧪 Sobre mim
 
-Profissional de Qualidade de Software com experiência sólida em:
+QA Senior com mais de 10 anos de experiência em qualidade de software,
+especializado em automação de testes, definição de estratégias de qualidade
+e liderança técnica de times de QA.
 
-* Automação de testes backend e frontend
-* Testes de APIs REST
-* Criação de frameworks de automação
-* Integração de pipelines CI/CD
-* Aplicação de Inteligência Artificial para apoio à estratégia de testes
+Atuo com automação de testes Web, API e Mobile utilizando Python, Robot
+Framework, Playwright, Java e ferramentas modernas de CI/CD. Tenho forte
+experiência na criação de frameworks de automação, bibliotecas reutilizáveis
+e na integração de testes automatizados aos pipelines de entrega contínua.
 
-Atuo com foco em **qualidade contínua**, **prevenção de falhas** e **entrega de valor ao negócio**.
+Com perfil técnico e visão de negócio, foco em qualidade contínua,
+prevenção de falhas e melhoria de processos, apoiando times ágeis na entrega
+de software confiável, escalável e de alto valor.
 
 ---
 
@@ -50,6 +53,21 @@ Atuo com foco em **qualidade contínua**, **prevenção de falhas** e **entrega 
 * Geração automática de casos de teste
 * Validação inteligente de resultados
 * Análise de logs e falhas
+* 
+---
+
+## 💼 Experiência Profissional
+
+**QA Senior / Tech Lead — TAG IMF (2023 – Atual)**  
+Atuação em automação de testes Web e API com Python/Robot Framework e TypeScript/Playwright.  
+Coordenação de times de QA, definição de estratégia de testes, criação de bibliotecas reutilizáveis e integração CI/CD.
+
+**QA Lead / Automation Consultant — Capgemini (2021 – 2023)**  
+Automação Mobile (Appium/Java) e API (RestAssured).  
+Atuação como QA Chapter, liderando práticas de qualidade e melhoria contínua.
+
+**Senior Test Analyst — Accenture & Matera (2019 – 2021)**  
+Automação de testes Web e API com Java, Selenium, Selenide e Jenkins.
 
 ---
 
