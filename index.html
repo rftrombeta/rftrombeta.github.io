@@ -180,19 +180,69 @@
 <section id="projetos" class="py-20 bg-gray-900">
   <div class="max-w-6xl mx-auto px-6">
 
-        <div class="grid">
-            <div class="card">
-                <h3>Framework Core Python</h3>
-                <p>Estrutura modular com PageObjects, paralelização e relatórios HTML.</p>
-                <a href="https://github.com/rftrombeta/sdet-python-automation-core" class="btn">Ver Repositório</a>
-            </div>
+    <h2 class="text-4xl font-bold mb-6 text-center">
+      Projetos SDET
+    </h2>
 
-            <div class="card">
-                <h3>Projeto de Automação com Robot</h3>
-                <p>Framework leve para validação de REST APIs com Pytest + Requests.</p>
-                <a href="https://github.com/rftrombeta/sdet-robot-automation-project" class="btn">Ver Repositório</a>
-            </div>
-        </div>
+    <p class="text-center text-gray-400 max-w-3xl mx-auto mb-14">
+      Projetos focados em arquitetura de automação, reutilização de código
+      e boas práticas SDET, utilizando Robot Framework como orquestrador
+      e um core de automação desacoplado em Python.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Projeto Core -->
+      <div class="bg-gray-800 rounded-xl p-8 shadow-lg">
+        <h3 class="text-2xl font-semibold mb-3">
+          SDET Python Automation Core
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Core de automação em Python, desacoplado de frameworks de teste,
+          responsável por comunicação HTTP, configuração e regras técnicas
+          reutilizáveis.
+        </p>
+
+        <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1">
+          <li>Arquitetura em camadas (Core / Services / Libraries)</li>
+          <li>Distribuição via pip</li>
+          <li>Configuração externa via YAML</li>
+          <li>Integração com Robot Framework e outros consumidores</li>
+        </ul>
+
+        <a href="https://github.com/rftrombeta/sdet-python-automation-core"
+           target="_blank"
+           class="text-blue-400 hover:underline">
+          🔗 Ver repositório no GitHub
+        </a>
+      </div>
+
+      <!-- Projeto Robot -->
+      <div class="bg-gray-800 rounded-xl p-8 shadow-lg">
+        <h3 class="text-2xl font-semibold mb-3">
+          SDET Robot Automation Project
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Projeto de automação com Robot Framework atuando como camada de
+          orquestração de testes, consumindo o core de automação via pip.
+        </p>
+
+        <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1">
+          <li>Robot Framework sem lógica técnica acoplada</li>
+          <li>Consumo do core de automação versionado</li>
+          <li>Configuração centralizada via YAML</li>
+          <li>Estrutura preparada para CI/CD</li>
+        </ul>
+
+        <a href="https://github.com/rftrombeta/sdet-robot-automation-project"
+           target="_blank"
+           class="text-blue-400 hover:underline">
+          🔗 Ver repositório no GitHub
+        </a>
+      </div>
+
     </div>
 
   </div>
