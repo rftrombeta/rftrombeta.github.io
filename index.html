@@ -75,10 +75,10 @@
       <!-- TAG IMF - Senior -->
       <div>
         <h3 class="text-xl font-semibold">
-          Senior QA Automation Engineer / Tech Lead
+          QA Automation Engineer / SDET
         </h3>
         <p class="text-gray-400">
-          TAG IMF • Nov/2024 – Atual • Maringá/PR
+          TAG IMF • Nov/2024 – Atual • Remoto
         </p>
         <ul class="list-disc list-inside mt-4 space-y-2 text-gray-200">
           <li>Atuação como QA Senior e Tech Lead, coordenando equipes de QA e automação</li>
@@ -96,7 +96,7 @@
           QA Specialist / Tech Lead
         </h3>
         <p class="text-gray-400">
-          TAG IMF • Fev/2023 – Nov/2024
+          TAG IMF • Fev/2023 – Nov/2024 • Remoto
         </p>
         <ul class="list-disc list-inside mt-4 space-y-2 text-gray-200">
           <li>Automação de testes API e Web com Robot Framework e Python</li>
@@ -109,7 +109,7 @@
       <!-- Capgemini -->
       <div>
         <h3 class="text-xl font-semibold">
-          QA Lead / Automation Consultant
+          QA Lead / Automation Consultant • Remoto
         </h3>
         <p class="text-gray-400">
           Capgemini • Set/2021 – Fev/2023
@@ -125,13 +125,27 @@
       <!-- Accenture / Matera -->
       <div>
         <h3 class="text-xl font-semibold">
-          Senior Test Analyst
+          Senior Test Engineer / SDET
         </h3>
         <p class="text-gray-400">
-          Accenture & Matera • 2019 – 2021
+          Accenture & Matera • 2019 – 2021 • Remoto
         </p>
-        <ul class="list-disc list-inside mt-4 space-y-2 text-gray-200">
-          <li>A
+
+        <ul class="list-disc list-inside mt-4 space-y-2 text-gray-300">
+          <li>Engenharia de testes em ambientes críticos e financeiros</li>
+          <li>Automação de testes funcionais e regressivos</li>
+          <li>Testes de APIs e sistemas integrados</li>
+          <li>Atuação próxima ao time de desenvolvimento</li>
+        </ul>
+
+        <p class="mt-3 text-sm text-gray-400">
+          <strong>Stack:</strong> Automação Web • APIs • Testes Integrados • Agile
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- SKILLS -->
 <section id="skills" class="section alt">
@@ -166,89 +180,60 @@
 <section id="projetos" class="py-20 bg-gray-900">
   <div class="max-w-6xl mx-auto px-6">
 
-    <h2 class="text-4xl font-bold mb-6 text-center">
-      Projetos SDET
-    </h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Framework Core Python</h3>
+                <p>Estrutura modular com PageObjects, paralelização e relatórios HTML.</p>
+                <a href="https://github.com/rftrombeta/sdet-python-automation-core" class="btn">Ver Repositório</a>
+            </div>
 
-    <p class="text-center text-gray-400 max-w-3xl mx-auto mb-14">
-      Projetos focados em arquitetura de automação, reutilização de código
-      e boas práticas SDET, utilizando Robot Framework como orquestrador
-      e um core de automação desacoplado em Python.
-    </p>
-
-    <div class="grid md:grid-cols-2 gap-10">
-
-      <!-- Projeto Core -->
-      <div class="bg-gray-800 rounded-xl p-8 shadow-lg">
-        <h3 class="text-2xl font-semibold mb-3">
-          SDET Python Automation Core
-        </h3>
-
-        <p class="text-gray-300 mb-4">
-          Core de automação em Python, desacoplado de frameworks de teste,
-          responsável por comunicação HTTP, configuração e regras técnicas
-          reutilizáveis.
-        </p>
-
-        <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1">
-          <li>Arquitetura em camadas (Core / Services / Libraries)</li>
-          <li>Distribuição via pip</li>
-          <li>Configuração externa via YAML</li>
-          <li>Integração com Robot Framework e outros consumidores</li>
-        </ul>
-
-        <a href="https://github.com/rftrombeta/sdet-python-automation-core"
-           target="_blank"
-           class="text-blue-400 hover:underline">
-          🔗 Ver repositório no GitHub
-        </a>
-      </div>
-
-      <!-- Projeto Robot -->
-      <div class="bg-gray-800 rounded-xl p-8 shadow-lg">
-        <h3 class="text-2xl font-semibold mb-3">
-          SDET Robot Automation Project
-        </h3>
-
-        <p class="text-gray-300 mb-4">
-          Projeto de automação com Robot Framework atuando como camada de
-          orquestração de testes, consumindo o core de automação via pip.
-        </p>
-
-        <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1">
-          <li>Robot Framework sem lógica técnica acoplada</li>
-          <li>Consumo do core de automação versionado</li>
-          <li>Configuração centralizada via YAML</li>
-          <li>Estrutura preparada para CI/CD</li>
-        </ul>
-
-        <a href="https://github.com/rftrombeta/sdet-robot-automation-project"
-           target="_blank"
-           class="text-blue-400 hover:underline">
-          🔗 Ver repositório no GitHub
-        </a>
-      </div>
-
+            <div class="card">
+                <h3>Projeto de Automação com Robot</h3>
+                <p>Framework leve para validação de REST APIs com Pytest + Requests.</p>
+                <a href="https://github.com/rftrombeta/sdet-robot-automation-project" class="btn">Ver Repositório</a>
+            </div>
+        </div>
     </div>
 
   </div>
 </section>
 
-<!-- ARQUITETURA -->
-<section class="py-20 bg-gray-800">
+<!-- Arquitetura -->
+<section id="arquitetura" class="py-20 bg-gray-800">
   <div class="max-w-5xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">
-      Arquitetura de Automação
+    <h2 class="text-4xl font-bold mb-6">
+      Arquitetura de Automação SDET
     </h2>
-
-    <p class="text-gray-300 mb-8">
-      Arquitetura SDET baseada em separação de responsabilidades,
-      onde o framework de testes atua apenas como orquestrador,
-      consumindo um core de automação reutilizável e versionado.
+    <p class="text-gray-300 mt-8 max-w-4xl mx-auto text-left">
+      Esta arquitetura foi desenhada seguindo princípios de engenharia de testes
+      e boas práticas de SDET, com o objetivo de desacoplar a escrita de testes
+      da lógica técnica e das integrações externas.
     </p>
-
-    <img src="assets/img/architecture-diagram.png"
-         alt="Arquitetura de Automação SDET"
+    <ul class="list-disc list-inside text-gray-300 mt-4 space-y-2 max-w-4xl mx-auto text-left">
+      <li>
+        <strong>Test Cases:</strong> camada responsável apenas pela definição de cenários,
+        mantendo os testes legíveis e focados em regras de negócio.
+      </li>
+      <li>
+        <strong>Test Framework:</strong> camada central que orquestra execução, setup,
+        teardown e integração com ferramentas de execução e relatórios.
+      </li>
+      <li>
+        <strong>Page Objects / Service Layer:</strong> abstração das interações Web e API,
+        permitindo reutilização e manutenção isolada de mudanças.
+      </li>
+      <li>
+        <strong>External Systems:</strong> representação de aplicações Web, APIs,
+        bancos de dados e serviços integrados ao sistema sob teste.
+      </li>
+    </ul>
+    
+    <p class="text-gray-300 mt-6 max-w-4xl mx-auto text-left">
+      Essa abordagem permite que os projetos de automação cresçam de forma sustentável,
+      com fácil integração em pipelines CI/CD e adoção por diferentes times e contextos.
+    </p>
+    <img src="assets/img/arquitetura-automacao-sdet.png"
+         alt="Arquitetura de automação de testes SDET com Robot Framework e Playwright"
          class="mx-auto rounded-xl shadow-lg">
   </div>
 </section>
@@ -293,7 +278,7 @@
 </section>
 
 <footer class="footer">
-    <p>© 2025 Rf Trombeta • QA Senior • Automação • Python • IA</p>
+    <p>© 2025 Rf Trombeta • QA SDET • Automação • IA</p>
 </footer>
 
 </body>
