@@ -189,6 +189,46 @@
     </div>
 </section>
 
+<!-- Arquitetura -->
+<section id="arquitetura" class="py-20 bg-gray-800">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-6">
+      Arquitetura de Automação SDET
+    </h2>
+    <p class="text-gray-300 mt-8 max-w-4xl mx-auto text-left">
+      Esta arquitetura foi desenhada seguindo princípios de engenharia de testes
+      e boas práticas de SDET, com o objetivo de desacoplar a escrita de testes
+      da lógica técnica e das integrações externas.
+    </p>
+    <ul class="list-disc list-inside text-gray-300 mt-4 space-y-2 max-w-4xl mx-auto text-left">
+      <li>
+        <strong>Test Cases:</strong> camada responsável apenas pela definição de cenários,
+        mantendo os testes legíveis e focados em regras de negócio.
+      </li>
+      <li>
+        <strong>Test Framework:</strong> camada central que orquestra execução, setup,
+        teardown e integração com ferramentas de execução e relatórios.
+      </li>
+      <li>
+        <strong>Page Objects / Service Layer:</strong> abstração das interações Web e API,
+        permitindo reutilização e manutenção isolada de mudanças.
+      </li>
+      <li>
+        <strong>External Systems:</strong> representação de aplicações Web, APIs,
+        bancos de dados e serviços integrados ao sistema sob teste.
+      </li>
+    </ul>
+    
+    <p class="text-gray-300 mt-6 max-w-4xl mx-auto text-left">
+      Essa abordagem permite que os projetos de automação cresçam de forma sustentável,
+      com fácil integração em pipelines CI/CD e adoção por diferentes times e contextos.
+    </p>
+    <img src="assets/img/arquitetura-automacao-sdet.png"
+         alt="Arquitetura de automação de testes SDET com Robot Framework e Playwright"
+         class="mx-auto rounded-xl shadow-lg">
+  </div>
+</section>
+
 <!-- CONTATO -->
 <section id="contato" class="py-20 bg-gray-900 text-white">
   <div class="max-w-4xl mx-auto px-6">
