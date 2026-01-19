@@ -48,7 +48,7 @@
 <!-- HERO -->
 <section class="hero">
     <div class="container">
-        <h2>QA Senior • Automação • Python • IA</h2>
+        <h2>QA Senior • Automação • Python • TypeScript • IA</h2>
         <p>Especialista em testes automatizados com Python, Robot Framework, Playwright e integrações inteligentes com IA.</p>
     </div>
 </section>
@@ -58,7 +58,8 @@
     <div class="container">
         <h2>Sobre mim</h2>
         <p>
-            QA Senior com sólida experiência em automação de testes, pipelines CI/CD, testes de API e integração de IA para aumento de cobertura e eficiência.
+            Especialista em QA/SDET focado em construir arquiteturas de automação escaláveis.
+            Atualmente desenvolvendo soluções que desacoplam lógica de negócio da execução de testes, promovendo alta manutenibilidade e reuso.
         </p>
     </div>
 </section>
@@ -199,17 +200,9 @@
         </h3>
 
         <p class="text-gray-300 mb-4">
-          Core de automação em Python, desacoplado de frameworks de teste,
-          responsável por comunicação HTTP, configuração e regras técnicas
-          reutilizáveis.
+          Atua como o provedor de recursos base. Contém os Models (contratos de dados) e utilitários de geração de massa (Faker).
+          O objetivo é garantir que a estrutura dos dados seja consistente e reutilizável por qualquer projeto cliente.
         </p>
-
-        <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1">
-          <li>Arquitetura em camadas (Core / Services / Libraries)</li>
-          <li>Distribuição via pip</li>
-          <li>Configuração externa via YAML</li>
-          <li>Integração com Robot Framework e outros consumidores</li>
-        </ul>
 
         <a href="https://github.com/rftrombeta/sdet-python-automation-core"
            target="_blank"
@@ -225,16 +218,9 @@
         </h3>
 
         <p class="text-gray-300 mb-4">
-          Projeto de automação com Robot Framework atuando como camada de
-          orquestração de testes, consumindo o core de automação via pip.
+          É o executor da estratégia de testes. Utiliza o Robot Framework para descrever os cenários de negócio e gerenciar as requisições HTTP (RequestsLibrary).
+          Consome o Core para garantir que os dados enviados e recebidos estejam em conformidade com os modelos definidos.
         </p>
-
-        <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1">
-          <li>Robot Framework sem lógica técnica acoplada</li>
-          <li>Consumo do core de automação versionado</li>
-          <li>Configuração centralizada via YAML</li>
-          <li>Estrutura preparada para CI/CD</li>
-        </ul>
 
         <a href="https://github.com/rftrombeta/sdet-robot-automation-project"
            target="_blank"
