@@ -69,28 +69,43 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <h2>QA Senior • Automação • Python • TypeScript • IA</h2>
-        <p>
-          Especialista em testes automatizados com Python, Robot Framework,
-          Playwright e integrações inteligentes com IA.
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1>Rodrigo Trombeta</h1>
+        <h2 class="dynamic-headline">SDET & Test Architect</h2>
+        <div class="hero-tags">
+          <span>Python</span>
+          <span>TypeScript</span>
+          <span>Shared Libraries</span>
+          <span>CI/CD</span>
+        </div>
+        <p class="hero-description">
+          Especialista em Engenharia de Qualidade focado na criação de
+          <strong>Plataformas de Automação</strong>. Transformo testes em ativos
+          de engenharia através de arquiteturas modernas, desacopladas e
+          escaláveis.
         </p>
+        <div class="hero-cta">
+          <a href="#projetos" class="btn-primary">Ver Projetos</a>
+          <a href="#contato" class="btn-secondary">Entrar em contato</a>
+        </div>
       </div>
-    </section>
+    </header>
 
     <!-- SOBRE -->
-    <section id="sobre" class="section">
+    <section id="sobre">
       <div class="container">
-        <h2>Sobre mim</h2>
+        <h2>Sobre Mim</h2>
         <p>
           Especialista em <strong>QA/SDET</strong> com sólida experiência na
-          construção de ecossistemas de automação escaláveis. Minha atuação foca
-          no desenvolvimento de <strong>Shared Libraries</strong> e arquiteturas
-          desacopladas, utilizando <strong>Python</strong> com
-          <strong>Robot Framework</strong> para automações de backend robustas,
-          e <strong>Playwright</strong> com
-          <strong>TypeScript/Node.js</strong> para testes de alta performance.
+          construção de ecossistemas de automação escaláveis. Com histórico como
+          Tech Lead, foco minha atuação no desenvolvimento de
+          <strong>Shared Libraries</strong> e arquiteturas desacopladas,
+          utilizando <strong>Python (Robot Framework)</strong> e
+          <strong>TypeScript (Playwright)</strong> para criar soluções de alta
+          performance e fácil manutenção. Sou entusiasta da modernização de
+          fluxos de engenharia de qualidade e validação de contratos via
+          <strong>Pydantic</strong>.
         </p>
       </div>
     </section>
@@ -358,37 +373,49 @@
         </p>
       </div>
 
-      <div class="mermaid-container" style="display: flex; justify-content: center; background: #1e1e1e; padding: 20px; border-radius: 8px; margin-top: 20px; overflow-x: auto;">
-        <pre class="mermaid" style="display: flex; justify-content: center; width: 100%;">
-            graph LR
-                subgraph "Infraestrutura (Shared Libs)"
-                    A[Python Core Lib]
-                    B[TypeScript Core Lib]
-                end
+      <section id="arquitetura" style="text-align: center">
+        <div class="container">
+          <h2>Arquitetura de Automação SDET</h2>
+          <p>
+            Minha abordagem foca no desacoplamento total entre a infraestrutura
+            de dados e a lógica de testes...
+          </p>
 
-                subgraph "Execução (Test Clients)"
-                    C[Robot Framework]
-                    D[Playwright TS]
-                end
-
-                subgraph "Recursos Compartilhados"
-                    E[Pydantic Models]
-                    F[Faker / Data Gen]
-                end
-
-                A --- E
-                A --- F
-                B --- E
-                C -->|Consome via Git| A
-                D -->|Consome via NPM| B
-                C -->|API Call| G((ServeRest API))
-                D -->|API Call| G
-                
-                style A fill:#3776ab,stroke:#fff,color:#fff
-                style B fill:#3178c6,stroke:#fff,color:#fff
-                style G fill:#f39c12,stroke:#333,color:#fff
-        </pre>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              background: #1a1a1a;
+              padding: 20px;
+              border-radius: 10px;
+              margin-top: 20px;
+              overflow-x: auto;
+            "
+          >
+            <pre class="mermaid">
+                graph LR
+                    subgraph "Infraestrutura (Shared Libs)"
+                        A[Python Core Lib]
+                        B[TypeScript Core Lib]
+                    end
+                    subgraph "Execução (Test Clients)"
+                        C[Robot Framework]
+                        D[Playwright TS]
+                    end
+                    A --- E[Pydantic Models]
+                    A --- F[Faker / Data Gen]
+                    B --- E
+                    C -->|Consome via Git| A
+                    D -->|Consome via NPM| B
+                    C --> G((ServeRest API))
+                    D --> G
+                    style A fill:#3776ab,stroke:#fff,color:#fff
+                    style B fill:#3178c6,stroke:#fff,color:#fff
+                    style G fill:#f39c12,stroke:#333,color:#fff
+            </pre>
+          </div>
         </div>
+      </section>
     </section>
 
     <!-- CONTATO -->
