@@ -358,46 +358,37 @@
         </p>
       </div>
 
-      <div
-        class="mermaid-container"
-        style="
-          background: #1e1e1e;
-          padding: 20px;
-          border-radius: 8px;
-          margin-top: 20px;
-        "
-      >
-        <pre class="mermaid">
-    graph LR
-        subgraph "Infraestrutura (Shared Libs)"
-            A[Python Core Lib]
-            B[TypeScript Core Lib]
-        end
+      <div class="mermaid-container" style="display: flex; justify-content: center; background: #1e1e1e; padding: 20px; border-radius: 8px; margin-top: 20px; overflow-x: auto;">
+        <pre class="mermaid" style="display: flex; justify-content: center; width: 100%;">
+            graph LR
+                subgraph "Infraestrutura (Shared Libs)"
+                    A[Python Core Lib]
+                    B[TypeScript Core Lib]
+                end
 
-        subgraph "Execução (Test Clients)"
-            C[Robot Framework]
-            D[Playwright TS]
-        end
+                subgraph "Execução (Test Clients)"
+                    C[Robot Framework]
+                    D[Playwright TS]
+                end
 
-        subgraph "Recursos Compartilhados"
-            E[Pydantic Models]
-            F[Faker / Data Gen]
-        end
+                subgraph "Recursos Compartilhados"
+                    E[Pydantic Models]
+                    F[Faker / Data Gen]
+                end
 
-        A --- E
-        A --- F
-        B --- E
-        C -->|Consome via Git| A
-        D -->|Consome via NPM| B
-        C -->|API Call| G((ServeRest API))
-        D -->|API Call| G
-        
-        style A fill:#3776ab,stroke:#fff,color:#fff
-        style B fill:#3178c6,stroke:#fff,color:#fff
-        style G fill:#f39c12,stroke:#333,color:#fff
-  </pre
-        >
-      </div>
+                A --- E
+                A --- F
+                B --- E
+                C -->|Consome via Git| A
+                D -->|Consome via NPM| B
+                C -->|API Call| G((ServeRest API))
+                D -->|API Call| G
+                
+                style A fill:#3776ab,stroke:#fff,color:#fff
+                style B fill:#3178c6,stroke:#fff,color:#fff
+                style G fill:#f39c12,stroke:#333,color:#fff
+        </pre>
+        </div>
     </section>
 
     <!-- CONTATO -->
