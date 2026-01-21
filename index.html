@@ -357,6 +357,47 @@
           diferentes times e contextos.
         </p>
       </div>
+
+      <div
+        class="mermaid-container"
+        style="
+          background: #1e1e1e;
+          padding: 20px;
+          border-radius: 8px;
+          margin-top: 20px;
+        "
+      >
+        <pre class="mermaid">
+    graph LR
+        subgraph "Infraestrutura (Shared Libs)"
+            A[Python Core Lib]
+            B[TypeScript Core Lib]
+        end
+
+        subgraph "Execução (Test Clients)"
+            C[Robot Framework]
+            D[Playwright TS]
+        end
+
+        subgraph "Recursos Compartilhados"
+            E[Pydantic Models]
+            F[Faker / Data Gen]
+        end
+
+        A --- E
+        A --- F
+        B --- E
+        C -->|Consome via Git| A
+        D -->|Consome via NPM| B
+        C -->|API Call| G((ServeRest API))
+        D -->|API Call| G
+        
+        style A fill:#3776ab,stroke:#fff,color:#fff
+        style B fill:#3178c6,stroke:#fff,color:#fff
+        style G fill:#f39c12,stroke:#333,color:#fff
+  </pre
+        >
+      </div>
     </section>
 
     <!-- CONTATO -->
@@ -413,5 +454,14 @@
     <footer class="footer">
       <p>© 2025 Rf Trombeta • QA SDET • Automação • IA</p>
     </footer>
+
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: "dark", // Você pode mudar para 'default' se preferir
+        securityLevel: "loose",
+      });
+    </script>
   </body>
 </html>
