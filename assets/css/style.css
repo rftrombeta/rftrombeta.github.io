@@ -135,3 +135,33 @@ body {
         text-decoration: none;
     }
 }
+
+/* Badge de status */
+.badge-status {
+    background-color: #f39c12;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Estilo para botão ainda não disponível */
+.btn-disabled {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #bdc3c7;
+    color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: not-allowed;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
