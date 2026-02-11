@@ -20,6 +20,105 @@
       theme: "dark",
       securityLevel: "loose",
     });
+    window.mermaid = mermaid;
+
+    const modal = document.getElementById("arch-modal");
+    const contentWrapper = document.getElementById("arch-modal-wrapper");
+    const content = document.getElementById("arch-modal-content");
+    
+    let zoom = 1;
+    let panX = 0;
+    let panY = 0;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+
+    const updateTransform = () => {
+      content.style.transform = `scale(${zoom}) translate(${panX}px, ${panY}px)`;
+    };
+
+    const openModal = (templateId) => {
+      if (!modal || !content) return;
+      const template = document.getElementById(templateId);
+      if (!template) return;
+
+      zoom = 1;
+      panX = 0;
+      panY = 0;
+
+      content.innerHTML = "";
+      content.appendChild(template.content.cloneNode(true));
+      modal.classList.remove("hidden");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("overflow-hidden");
+
+      updateTransform();
+
+      if (window.mermaid) {
+        window.mermaid.init(undefined, content.querySelectorAll(".mermaid"));
+      }
+    };
+
+    const closeModal = () => {
+      if (!modal || !content) return;
+      modal.classList.add("hidden");
+      modal.setAttribute("aria-hidden", "true");
+      content.innerHTML = "";
+      document.body.classList.remove("overflow-hidden");
+      isDragging = false;
+    };
+
+    // Zoom com scroll
+    contentWrapper?.addEventListener("wheel", (e) => {
+      if (!modal.classList.contains("hidden")) {
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? 0.9 : 1.1;
+        zoom = Math.max(0.5, Math.min(10, zoom * delta));
+        updateTransform();
+      }
+    }, { passive: false });
+
+    // Pan com drag
+    content?.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      dragStartX = e.clientX - panX;
+      dragStartY = e.clientY - panY;
+      contentWrapper.style.cursor = "grabbing";
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      if (isDragging && zoom > 1.05) {
+        panX = e.clientX - dragStartX;
+        panY = e.clientY - dragStartY;
+        updateTransform();
+      }
+    });
+
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+      if (contentWrapper) contentWrapper.style.cursor = "grab";
+    });
+
+    // Fechar modal
+    document.addEventListener("click", (event) => {
+      const trigger = event.target.closest("[data-arch-target]");
+      if (trigger) {
+        event.preventDefault();
+        openModal(trigger.getAttribute("data-arch-target"));
+        return;
+      }
+
+      if (event.target.closest("[data-arch-close]") || event.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Fechar com Escape
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modal && !modal.classList.contains("hidden")) {
+        closeModal();
+      }
+    });
   </script>
 </body>
 

@@ -4,37 +4,204 @@
     <p class="text-gray-400 mb-10 max-w-3xl mx-auto">
       Visao de integracao entre Shared Libraries e Clientes de Teste.
     </p>
-    <div class="bg-gray-900 p-6 md:p-10 rounded-3xl border border-gray-800 overflow-x-auto shadow-2xl">
-      <pre class="mermaid">
+    <button type="button" data-arch-target="arch-unified"
+      class="mx-auto bg-gradient-to-r from-orange-500 to-blue-500 hover:from-orange-600 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">
+      Ver Ecosistema Completo <span class="ml-2">→</span>
+    </button>
+
+    <div id="arch-modal" aria-hidden="true"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 px-4 py-4 sm:px-6 sm:py-10 overflow-hidden">
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl w-full p-4 sm:p-6 relative flex flex-col h-full max-h-[95vh] sm:max-h-[90vh] sm:max-w-5xl">
+        <div class="flex justify-between items-start mb-4 flex-shrink-0">
+          <div class="text-xs text-gray-500 hidden sm:block">
+            <p>🖱️ <kbd class="bg-gray-800 px-2 py-1 rounded">Scroll</kbd> para zoom | <strong>Arraste</strong> para navegar</p>
+          </div>
+          <button type="button" data-arch-close
+            class="text-gray-400 hover:text-white transition ml-auto">✕</button>
+        </div>
+        <div id="arch-modal-wrapper" class="flex-1 overflow-hidden flex items-center justify-center">
+          <div id="arch-modal-content" style="min-width: min-content; width: fit-content; height: fit-content;"></div>
+        </div>
+      </div>
+    </div>
+
+    <template id="arch-unified">
+      <h4 class="text-xl font-bold mb-4 text-center bg-gradient-to-r from-orange-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent">Ecosistema Completo SDET</h4>
+      <div class="bg-gray-900 p-6 md:p-8 rounded-2xl border border-gray-800 overflow-x-auto">
+        <pre class="mermaid">
+                    graph LR
+
+                    subgraph "Strategy 3: API Automation"
+                        Tests["📋 Test Specs"]
+                        POM["⚙️ Page Objects<br/>(Layers)"]
+                        Client["🔌 API Client"]
+                        Tests --> POM
+                        POM --> Client
+                    end
+
+                    subgraph "Strategy 2: Robot Framework"
+                        Runner["🤖 Robot Framework<br/>Runner"]
+                        Suites["Test Suites"]
+                        Runner --> Suites
+                    end
+
+                    subgraph "Strategy 1: Co-location"
+                        App["🎭 Velo App<br/>(src/)"]
+                        VTests["Playwright Tests<br/>(playwright/)"]
+                        App <-->|Local Dev Loop| VTests
+                    end
+
+                    subgraph "Targets"
+                        TargetAPI["🎯 Target API"]
+                        VWeb["🌐 Velo<br/>Interface"]
+                        ServeRest["🔗 ServeRest API"]
+                    end
+                        
+                    subgraph "Shared Infrastructure"
+                        Core["🔧 Python Core Lib<br/>(Pydantic + Fixtures)"]
+                        Models["📦 Models & Contracts"]
+                        Data["📊 Faker / Test Data"]
+                        Helpers["🛠️ Shared Helpers"]
+                    end
+                    
+                    subgraph "CI/CD Pipeline"
+                        CI["Pipeline"]
+                        Report["📈 Reports"]
+                        CI --> Report
+                    end
+
+                    Core --> Models
+                    Core --> Data
+                    Core --> Helpers
+                    
+                    Runner -->|Usa| Core
+                    
+                    VTests -->|Valida| VWeb
+                    Suites -->|Valida| ServeRest
+                    Client -->|Chama| TargetAPI
+                    
+                    CI -->|Executa| Tests
+                    Tests --> Report
+
+                    style Core fill:#3178c6,stroke:#60a5fa,color:#fff,stroke-width:3px
+                    style Models fill:#2d3748,stroke:#60a5fa,color:#fff
+                    style Data fill:#2d3748,stroke:#60a5fa,color:#fff
+                    style Helpers fill:#2d3748,stroke:#60a5fa,color:#fff
+                    
+                    style App fill:#2d3748,stroke:#ea580c,color:#fff
+                    style VTests fill:#ea580c,stroke:#fff,color:#fff
+                    style VWeb fill:#f39c12,stroke:#333,color:#fff
+                    
+                    style Runner fill:#3776ab,stroke:#fff,color:#fff
+                    style Suites fill:#2d3748,stroke:#3776ab,color:#fff
+                    style ServeRest fill:#f39c12,stroke:#333,color:#fff
+                    
+                    style Tests fill:#10b981,stroke:#fff,color:#fff
+                    style POM fill:#059669,stroke:#fff,color:#fff
+                    style Client fill:#059669,stroke:#fff,color:#fff
+                    style TargetAPI fill:#f39c12,stroke:#333,color:#fff
+                    
+                    style CI fill:#6366f1,stroke:#fff,color:#fff
+                    style Report fill:#4f46e5,stroke:#fff,color:#fff
+                </pre>
+      </div>
+    </template>
+
+    <template id="arch-velo">
+      <h4 class="text-xl font-bold mb-4 text-orange-400">Velo: Co-location</h4>
+      <div class="bg-gray-900 p-6 md:p-8 rounded-2xl border border-gray-800 overflow-x-auto">
+        <pre class="mermaid">
                     graph TD
-                    subgraph "Estrategia 1: Co-location (Velo)"
-                        App[Web Application - src]
-                        VeloTests[Playwright Suite - playwright/]
-                        App <-->|Local Dev Loop| VeloTests
+                    subgraph "Repo Velo"
+                        App[Web App - src]
+                        Tests[Playwright Tests - playwright/]
+                        App <-->|Local Dev Loop| Tests
                     end
 
-                    subgraph "Estrategia 2: Shared Libraries (Scalable)"
-                        PyCore[Python Core Lib]
-                        Robot[Robot Framework Runner]
-                        PyCore --- Models[Pydantic / Faker]
-                        Robot -->|Consome via Git| PyCore
+                    subgraph "CI Pipeline"
+                        CI[Pipeline] --> Report[Relatorios]
                     end
 
-                    subgraph "Camada de Target (SUT)"
-                        API((ServeRest API))
-                        WEB((Velo Interface))
-                    end
-
-                    VeloTests -->|Valida| WEB
-                    Robot -->|Valida| API
+                    Tests -->|Valida| Web((Velo Interface))
+                    CI --> Tests
 
                     style App fill:#2d3748,stroke:#4a5568,color:#fff
-                    style VeloTests fill:#ea580c,stroke:#fff,color:#fff
-                    style PyCore fill:#3178c6,stroke:#fff,color:#fff
-                    style Robot fill:#3776ab,stroke:#fff,color:#fff
-                    style API fill:#f39c12,stroke:#333,color:#fff
-                    style WEB fill:#f39c12,stroke:#333,color:#fff
+                    style Tests fill:#ea580c,stroke:#fff,color:#fff
+                    style Web fill:#f39c12,stroke:#333,color:#fff
                 </pre>
-    </div>
+      </div>
+    </template>
+
+    <template id="arch-python-core">
+      <h4 class="text-xl font-bold mb-4 text-blue-300">Python Core Lib</h4>
+      <div class="bg-gray-900 p-6 md:p-8 rounded-2xl border border-gray-800 overflow-x-auto">
+        <pre class="mermaid">
+                    graph TD
+                    Core[Python Core Lib]
+                    Models[Pydantic Models]
+                    Data[Faker / Test Data]
+                    Helpers[Shared Helpers]
+                    Consumer[Robot Runner]
+
+                    Core --> Models
+                    Core --> Data
+                    Core --> Helpers
+                    Consumer -->|Consome via Git| Core
+
+                    style Core fill:#3178c6,stroke:#fff,color:#fff
+                    style Consumer fill:#3776ab,stroke:#fff,color:#fff
+                </pre>
+      </div>
+    </template>
+
+    <template id="arch-robot-runner">
+      <h4 class="text-xl font-bold mb-4 text-blue-300">Robot Test Runner</h4>
+      <div class="bg-gray-900 p-6 md:p-8 rounded-2xl border border-gray-800 overflow-x-auto">
+        <pre class="mermaid">
+                    graph TD
+                    Runner[Robot Framework Runner]
+                    Suites[Test Suites]
+                    Core[Python Core Lib]
+                    API((ServeRest API))
+                    CI[CI Pipeline]
+                    Report[Relatorios]
+
+                    Runner --> Suites
+                    Runner -->|Usa| Core
+                    Suites -->|Valida| API
+                    CI --> Runner
+                    CI --> Report
+
+                    style Runner fill:#3776ab,stroke:#fff,color:#fff
+                    style Core fill:#3178c6,stroke:#fff,color:#fff
+                    style API fill:#f39c12,stroke:#333,color:#fff
+                </pre>
+      </div>
+    </template>
+
+    <template id="arch-playwright-api">
+      <h4 class="text-xl font-bold mb-4 text-emerald-300">Playwright API Automation</h4>
+      <div class="bg-gray-900 p-6 md:p-8 rounded-2xl border border-gray-800 overflow-x-auto">
+        <pre class="mermaid">
+                    graph TD
+                    Tests[Test Specs]
+                    POM[Page Objects / Layers]
+                    Client[API Client]
+                    API((API Under Test))
+                    CI[CI Pipeline]
+                    Report[Relatorios]
+
+                    Tests --> POM
+                    POM --> Client
+                    Client --> API
+                    CI --> Tests
+                    CI --> Report
+
+                    style Tests fill:#10b981,stroke:#fff,color:#fff
+                    style POM fill:#059669,stroke:#fff,color:#fff
+                    style API fill:#f39c12,stroke:#333,color:#fff
+                </pre>
+      </div>
+    </template>
   </div>
 </section>
