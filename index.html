@@ -1,508 +1,410 @@
 <!doctype html>
 <html lang="pt-BR" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rodrigo Trombeta | SDET & Test Architect</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rodrigo Trombeta | SDET & Test Architect</title>
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
-      body {
-        font-family: "Inter", sans-serif;
-      }
-      .mermaid svg {
-        margin: 0 auto;
-      }
-      .badge-soon {
-        background: #f39c12;
-        color: #000;
-        padding: 2px 8px;
-        border-radius: 4px;
-        font-size: 11px;
-        font-weight: bold;
-      }
-    </style>
-  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <body class="bg-gray-900 text-gray-100">
-    <nav
-      class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800"
-    >
-      <div
-        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <span
-          class="text-xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"
-        >
-          Rodrigo Trombeta
-        </span>
-        <div class="hidden md:flex space-x-6 text-sm font-medium">
-          <a href="#sobre" class="hover:text-orange-500 transition">Sobre</a>
-          <a href="#experiencia" class="hover:text-orange-500 transition"
-            >Experiência</a
-          >
-          <a href="#skills" class="hover:text-orange-500 transition">Skills</a>
-          <a href="#projetos" class="hover:text-orange-500 transition"
-            >Projetos</a
-          >
-          <a href="#arquitetura" class="hover:text-orange-500 transition"
-            >Arquitetura</a
-          >
-          <a href="#contato" class="hover:text-orange-500 transition"
-            >Contato</a
-          >
-        </div>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    .mermaid svg {
+      margin: 0 auto;
+    }
+
+    .badge-soon {
+      background: #f39c12;
+      color: #000;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100">
+  <nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <span class="text-xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+        Rodrigo Trombeta
+      </span>
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="#sobre" class="hover:text-orange-500 transition">Sobre</a>
+        <a href="#experiencia" class="hover:text-orange-500 transition">Experiência</a>
+        <a href="#skills" class="hover:text-orange-500 transition">Skills</a>
+        <a href="#projetos" class="hover:text-orange-500 transition">Projetos</a>
+        <a href="#arquitetura" class="hover:text-orange-500 transition">Arquitetura</a>
+        <a href="#contato" class="hover:text-orange-500 transition">Contato</a>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <header class="pt-32 pb-20 px-6">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6">Rodrigo Trombeta</h1>
-        <h2 class="text-2xl md:text-3xl text-orange-500 font-light mb-8">
-          SDET & Test Architect
-        </h2>
-        <div class="flex flex-wrap justify-center gap-3 mb-10">
-          <span
-            class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm"
-            >SDET Specialist</span
-          >
-          <span
-            class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm"
-            >Test Architect</span
-          >
-          <span
-            class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm"
-            >Shared Libraries</span
-          >
-          <span
-            class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm"
-            >Playwright</span
-          >
-          <span
-            class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm"
-            >Robot Framework</span
-          >
-          <span
-            class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm"
-            >Intelligent Testing</span
-          >
-        </div>
-        <p
-          class="text-lg text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto"
-        >
-          Especialista em Engenharia de Qualidade focado na criação de
-          <strong>Plataformas de Automação</strong>. Transformo testes em ativos
-          de engenharia através de arquiteturas modernas e desacopladas.
-        </p>
-        <div class="flex justify-center gap-4">
-          <a
-            href="#projetos"
-            class="bg-orange-600 hover:bg-orange-700 px-8 py-3 rounded-lg font-bold transition"
-            >Ver Projetos</a
-          >
-          <a
-            href="#contato"
-            class="border border-gray-700 hover:bg-gray-800 px-8 py-3 rounded-lg font-bold transition"
-            >Contato</a
-          >
-        </div>
+  <header class="pt-32 pb-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6">Rodrigo Trombeta</h1>
+      <h2 class="text-2xl md:text-3xl text-orange-500 font-light mb-8">
+        SDET & Test Architect
+      </h2>
+
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">SDET Specialist</span>
+        <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">Test Architect</span>
+        <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">Shared Libraries</span>
+        <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">Playwright</span>
+        <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">Robot Framework</span>
+        <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">Intelligent Testing</span>
       </div>
-    </header>
 
-    <section id="sobre" class="py-20 bg-gray-800/50">
-      <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-8 border-l-4 border-orange-500 pl-4">
-          Sobre Mim
-        </h2>
-        <p class="text-gray-300 text-lg leading-relaxed mb-6">
-          Especialista em <strong>QA/SDET</strong> com sólida experiência na
-          construção de ecossistemas de automação escaláveis. Com histórico como
-          Tech Lead, foco minha atuação no desenvolvimento de
-          <strong>Shared Libraries</strong> e arquiteturas desacopladas,
-          utilizando <strong>Python (Robot Framework)</strong> e
-          <strong>TypeScript (Playwright)</strong> para criar soluções de alta
-          performance e fácil manutenção.
-        </p>
-        <p class="text-gray-300 text-lg leading-relaxed">
-          Minha abordagem foca em transformar a qualidade em um ativo de
-          engenharia: garanto a <strong>integridade de contratos</strong>
-          e a modernização de fluxos de CI/CD utilizando os padrões mais
-          rigorosos de cada stack (como PEP 621 em Python e bibliotecas
-          fortemente tipadas em Node.js).
-        </p>
+      <p class="text-lg text-gray-400 leading-relaxed mb-6 max-w-2xl mx-auto">
+        Especialista em Engenharia de Qualidade focado na criação de
+        <strong>Plataformas de Automação</strong>. Transformo testes em ativos
+        de engenharia através de arquiteturas modernas e desacopladas.
+      </p>
+
+      <div class="mb-12">
+        <a href="https://bcr.bstqb.org.br/validate/26-CTFL-15124-BR" target="_blank"
+          title="Certified Tester Foundation Level - ISTQB"
+          class="inline-flex items-center gap-3 px-4 py-2 bg-gray-800/30 border border-gray-700/50 rounded-xl hover:border-orange-500/50 transition group">
+          <img src="https://www.istqb.org/images/istqb-logo.png" alt="ISTQB Certified"
+            class="h-7 w-auto opacity-80 group-hover:opacity-100 transition">
+          <div class="text-left border-l border-gray-700 pl-3">
+            <span class="block text-[10px] text-gray-500 uppercase leading-none font-bold mb-1">Validation
+              Verified</span>
+            <span
+              class="text-sm text-gray-300 group-hover:text-orange-500 transition font-semibold tracking-wide">ISTQB®
+              CTFL</span>
+          </div>
+        </a>
       </div>
-      <div
-        class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-gray-800 pt-8"
-      >
-        <div class="text-center">
-          <span class="block text-orange-500 font-bold text-xl"
-            >Shift-Left</span
-          >
-          <span class="text-xs text-gray-500 uppercase tracking-widest"
-            >Qualidade desde o dia 0</span
-          >
-        </div>
-        <div class="text-center border-x border-gray-800">
-          <span class="block text-orange-500 font-bold text-xl"
-            >DRY Principal</span
-          >
-          <span class="text-xs text-gray-500 uppercase tracking-widest"
-            >Reutilização máxima de código</span
-          >
-        </div>
-        <div class="text-center">
-          <span class="block text-orange-500 font-bold text-xl">AI-Driven</span>
-          <span class="text-xs text-gray-500 uppercase tracking-widest"
-            >Eficiência com Inteligência</span
-          >
-        </div>
+
+      <div class="flex justify-center gap-4">
+        <a href="#projetos"
+          class="bg-orange-600 hover:bg-orange-700 px-8 py-3 rounded-lg font-bold transition shadow-lg shadow-orange-900/20">
+          Ver Projetos
+        </a>
+        <a href="#contato" class="border border-gray-700 hover:bg-gray-800 px-8 py-3 rounded-lg font-bold transition">
+          Contato
+        </a>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <section id="experiencia" class="py-20">
-      <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center">
-          Experiência Profissional
-        </h2>
-        <div class="space-y-12 border-l-2 border-gray-800 pl-8 ml-4">
-          <div class="relative">
-            <div
-              class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-orange-500 border-4 border-gray-900"
-            ></div>
-            <h3 class="text-xl font-bold">
-              QA Automation Engineer / SDET Specialist
-            </h3>
-            <p class="text-orange-500 mb-4 font-medium">
-              TAG IMF • 2023 – Atual
-            </p>
-            <ul class="text-gray-400 space-y-2 list-disc list-inside">
-              <li>Liderança técnica e coordenação de times de automação.</li>
-              <li>
-                Arquitetura de testes Web e API com Python e Robot Framework.
-              </li>
-              <li>
-                Criação de bibliotecas reutilizáveis (Shared Libraries) e
-                integração em CI/CD.
-              </li>
-              <li>Migração estratégica para Playwright + TypeScript.</li>
-            </ul>
-          </div>
-          <div class="relative">
-            <div
-              class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-gray-700 border-4 border-gray-900"
-            ></div>
-            <h3 class="text-xl font-bold">QA Lead / Automation Consultant</h3>
-            <p class="text-gray-500 mb-4 font-medium">
-              Capgemini • 2021 – 2023
-            </p>
-            <ul class="text-gray-400 space-y-2 list-disc list-inside">
-              <li>
-                Consultoria técnica em automação Mobile (Appium) e APIs
-                (RestAssured).
-              </li>
-              <li>
-                Atuação como QA Chapter Lead focado em estratégia de testes.
-              </li>
-            </ul>
-          </div>
-          <div class="relative">
-            <div
-              class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-gray-700 border-4 border-gray-900"
-            ></div>
-            <h3 class="text-xl font-bold">Senior Test Engineer / SDET</h3>
-            <p class="text-gray-500 mb-4 font-medium">
-              Accenture & Matera • 2019 – 2021
-            </p>
-            <ul class="text-gray-400 space-y-2 list-disc list-inside">
-              <li>Engenharia de testes em sistemas financeiros críticos.</li>
-              <li>Foco em testes integrados e automação de APIs.</li>
-            </ul>
-          </div>
-        </div>
+  <section id="sobre" class="py-20 bg-gray-800/50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 border-l-4 border-orange-500 pl-4">
+        Sobre Mim
+      </h2>
+      <p class="text-gray-300 text-lg leading-relaxed mb-6">
+        Especialista em <strong>QA/SDET</strong> com sólida experiência na
+        construção de ecossistemas de automação escaláveis. Com histórico como
+        Tech Lead, foco minha atuação no desenvolvimento de
+        <strong>Shared Libraries</strong> e arquiteturas desacopladas,
+        utilizando <strong>Python (Robot Framework)</strong> e
+        <strong>TypeScript (Playwright)</strong> para criar soluções de alta
+        performance e fácil manutenção.
+      </p>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Minha abordagem foca em transformar a qualidade em um ativo de
+        engenharia: garanto a <strong>integridade de contratos</strong>
+        e a modernização de fluxos de CI/CD utilizando os padrões mais
+        rigorosos de cada stack (como PEP 621 em Python e bibliotecas
+        fortemente tipadas em Node.js).
+      </p>
+    </div>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-gray-800 pt-8">
+      <div class="text-center">
+        <span class="block text-orange-500 font-bold text-xl">Shift-Left</span>
+        <span class="text-xs text-gray-500 uppercase tracking-widest">Qualidade desde o dia 0</span>
       </div>
-    </section>
-
-    <section id="skills" class="py-20 bg-gray-800/50">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center">
-          Skills & Competências
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div
-            class="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition"
-          >
-            <div class="text-orange-500 mb-4 text-2xl">🏗️</div>
-            <h4 class="font-bold text-white mb-3">Test Architecture</h4>
-            <p class="text-sm text-gray-400">
-              Shared Libraries, Decoupled Architecture, Page Objects e Design
-              Patterns para automação.
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition"
-          >
-            <div class="text-orange-500 mb-4 text-2xl">⚙️</div>
-            <h4 class="font-bold text-white mb-3">Automation Stacks</h4>
-            <p class="text-sm text-gray-400">
-              Python (Robot Framework), TypeScript (Playwright), Selenium e
-              Appium.
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition"
-          >
-            <div class="text-orange-500 mb-4 text-2xl">🧪</div>
-            <h4 class="font-bold text-white mb-3">Contract & Data</h4>
-            <p class="text-sm text-gray-400">
-              Validação de contratos com Pydantic, gestão de massa com Faker e
-              Schema Validation (JSON).
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition"
-          >
-            <div class="text-orange-500 mb-4 text-2xl">🚀</div>
-            <h4 class="font-bold text-white mb-3">
-              DevOps & Intelligent Testing
-            </h4>
-            <p class="text-sm text-gray-400">
-              CI/CD com GitHub Actions, Docker, e implementação de IA assistida
-              para geração de massa e análise de falhas.
-            </p>
-          </div>
-        </div>
+      <div class="text-center border-x border-gray-800">
+        <span class="block text-orange-500 font-bold text-xl">DRY Principal</span>
+        <span class="text-xs text-gray-500 uppercase tracking-widest">Reutilização máxima de código</span>
       </div>
-    </section>
+      <div class="text-center">
+        <span class="block text-orange-500 font-bold text-xl">AI-Driven</span>
+        <span class="text-xs text-gray-500 uppercase tracking-widest">Eficiência com Inteligência</span>
+      </div>
+    </div>
+  </section>
 
-    <section id="projetos" class="py-20">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-4 text-center text-white">
-          Projetos SDET
-        </h2>
-        <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-          Implementação de diversas abordagens arquiteturais — de
-          <strong>Shared Libraries</strong> desacopladas a estratégias de
-          <strong>Co-location</strong>.
-        </p>
-
-        <div class="mb-16">
-          <h3 class="text-xl font-bold mb-6 flex items-center text-orange-500">
-            <span class="mr-3">🚀</span> Estratégia: Co-location (Full-Stack
-            Testing)
+  <section id="experiencia" class="py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 text-center">
+        Experiência Profissional
+      </h2>
+      <div class="space-y-12 border-l-2 border-gray-800 pl-8 ml-4">
+        <div class="relative">
+          <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-orange-500 border-4 border-gray-900"></div>
+          <h3 class="text-xl font-bold">
+            QA Automation Engineer / SDET Specialist
           </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
-              class="bg-gray-900 rounded-xl overflow-hidden border border-orange-500/30 hover:border-orange-500 transition group flex flex-col shadow-lg shadow-orange-900/5"
-            >
-              <div class="p-6 flex-grow">
-                <div class="flex justify-between items-start mb-4">
-                  <div class="text-orange-500 text-2xl">🎭</div>
-                  <a
-                    href="https://github.com/rftrombeta/velo"
-                    target="_blank"
-                    class="text-gray-400 hover:text-white transition"
-                  >
-                    <svg
-                      class="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.412-4.041-1.412-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2">
-                  Velo: Web Automation & App
-                </h3>
-                <p class="text-gray-400 text-sm mb-4">
-                  Projeto autossuficiente onde a automação reside no mesmo
-                  repositório da aplicação. Garantia de feedback instantâneo no
-                  ciclo de dev.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 bg-orange-500/10 text-orange-500 text-xs rounded"
-                    >Playwright</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-orange-500/10 text-orange-500 text-xs rounded"
-                    >Integrated</span
-                  >
-                </div>
-              </div>
-              <div class="p-6 pt-0 mt-auto">
-                <a
-                  href="https://github.com/rftrombeta/velo"
-                  target="_blank"
-                  class="text-white text-sm font-medium flex items-center group-hover:text-orange-500 transition"
-                >
-                  Ver Repositório <span class="ml-2">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
+          <p class="text-orange-500 mb-4 font-medium">
+            TAG IMF • 2023 – Atual
+          </p>
+          <ul class="text-gray-400 space-y-2 list-disc list-inside">
+            <li>Liderança técnica e coordenação de times de automação.</li>
+            <li>
+              Arquitetura de testes Web e API com Python e Robot Framework.
+            </li>
+            <li>
+              Criação de bibliotecas reutilizáveis (Shared Libraries) e
+              integração em CI/CD.
+            </li>
+            <li>Migração estratégica para Playwright + TypeScript.</li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-gray-700 border-4 border-gray-900"></div>
+          <h3 class="text-xl font-bold">QA Lead / Automation Consultant</h3>
+          <p class="text-gray-500 mb-4 font-medium">
+            Capgemini • 2021 – 2023
+          </p>
+          <ul class="text-gray-400 space-y-2 list-disc list-inside">
+            <li>
+              Consultoria técnica em automação Mobile (Appium) e APIs
+              (RestAssured).
+            </li>
+            <li>
+              Atuação como QA Chapter Lead focado em estratégia de testes.
+            </li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-gray-700 border-4 border-gray-900"></div>
+          <h3 class="text-xl font-bold">Senior Test Engineer / SDET</h3>
+          <p class="text-gray-500 mb-4 font-medium">
+            Accenture & Matera • 2019 – 2021
+          </p>
+          <ul class="text-gray-400 space-y-2 list-disc list-inside">
+            <li>Engenharia de testes em sistemas financeiros críticos.</li>
+            <li>Foco em testes integrados e automação de APIs.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-20 bg-gray-800/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 text-center">
+        Skills & Competências
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition">
+          <div class="text-orange-500 mb-4 text-2xl">🏗️</div>
+          <h4 class="font-bold text-white mb-3">Test Architecture</h4>
+          <p class="text-sm text-gray-400">
+            Shared Libraries, Decoupled Architecture, Page Objects e Design
+            Patterns para automação.
+          </p>
         </div>
 
-        <div>
-          <h3 class="text-xl font-bold mb-6 flex items-center text-blue-400">
-            <span class="mr-3">🏗️</span> Estratégia: Shared Libraries (Scalable
-            Ecosystem)
-          </h3>
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition">
+          <div class="text-orange-500 mb-4 text-2xl">⚙️</div>
+          <h4 class="font-bold text-white mb-3">Automation Stacks</h4>
+          <p class="text-sm text-gray-400">
+            Python (Robot Framework), TypeScript (Playwright), Selenium e
+            Appium.
+          </p>
+        </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
-              class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition group flex flex-col"
-            >
-              <div class="p-6 flex-grow">
-                <div class="flex justify-between items-start mb-4">
-                  <div class="text-blue-500 text-2xl">🐍</div>
-                  <a
-                    href="https://github.com/rftrombeta/sdet-python-automation-core"
-                    target="_blank"
-                    class="text-gray-400 hover:text-white transition"
-                  >
-                    <svg
-                      class="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.412-4.041-1.412-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2">
-                  Python Core Lib
-                </h3>
-                <p class="text-gray-400 text-sm mb-4">
-                  Shared Library centralizada com Pydantic e Faker para
-                  validação de contratos e massa de dados.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 bg-blue-500/10 text-blue-500 text-xs rounded"
-                    >Core Lib</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-500/10 text-blue-500 text-xs rounded"
-                    >Shared</span
-                  >
-                </div>
-              </div>
-              <div class="p-6 pt-0 mt-auto border-t border-gray-800">
-                <a
-                  href="https://github.com/rftrombeta/sdet-python-automation-core"
-                  target="_blank"
-                  class="text-white text-sm font-medium flex items-center group-hover:text-blue-400 transition pt-4"
-                >
-                  Ver Repositório <span class="ml-2">→</span>
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition">
+          <div class="text-orange-500 mb-4 text-2xl">🧪</div>
+          <h4 class="font-bold text-white mb-3">Contract & Data</h4>
+          <p class="text-sm text-gray-400">
+            Validação de contratos com Pydantic, gestão de massa com Faker e
+            Schema Validation (JSON).
+          </p>
+        </div>
+
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition">
+          <div class="text-orange-500 mb-4 text-2xl">🚀</div>
+          <h4 class="font-bold text-white mb-3">
+            DevOps & Intelligent Testing
+          </h4>
+          <p class="text-sm text-gray-400">
+            CI/CD com GitHub Actions, Docker, e implementação de IA assistida
+            para geração de massa e análise de falhas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-4 text-center text-white">
+        Projetos SDET
+      </h2>
+      <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+        Implementação de diversas abordagens arquiteturais — de
+        <strong>Shared Libraries</strong> desacopladas a estratégias de
+        <strong>Co-location</strong>.
+      </p>
+
+      <div class="mb-16">
+        <h3 class="text-xl font-bold mb-6 flex items-center text-orange-500">
+          <span class="mr-3">🚀</span> Estratégia: Co-location (Full-Stack
+          Testing)
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-900 rounded-xl overflow-hidden border border-orange-500/30 hover:border-orange-500 transition group flex flex-col shadow-lg shadow-orange-900/5">
+            <div class="p-6 flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <div class="text-orange-500 text-2xl">🎭</div>
+                <a href="https://github.com/rftrombeta/velo" target="_blank"
+                  class="text-gray-400 hover:text-white transition">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.412-4.041-1.412-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
                 </a>
               </div>
-            </div>
-
-            <div
-              class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition group flex flex-col"
-            >
-              <div class="p-6 flex-grow">
-                <div class="flex justify-between items-start mb-4">
-                  <div class="text-blue-500 text-2xl">🤖</div>
-                  <a
-                    href="https://github.com/rftrombeta/sdet-robot-automation-project"
-                    target="_blank"
-                    class="text-gray-400 hover:text-white transition"
-                  >
-                    <svg
-                      class="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.412-4.041-1.412-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2">
-                  Robot Test Runner
-                </h3>
-                <p class="text-gray-400 text-sm mb-4">
-                  Suíte de testes que importa a Python Core Lib via Git,
-                  isolando a lógica de negócio da infraestrutura.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 bg-blue-500/10 text-blue-500 text-xs rounded"
-                    >Robot</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-500/10 text-blue-500 text-xs rounded"
-                    >Consumer</span
-                  >
-                </div>
-              </div>
-              <div class="p-6 pt-0 mt-auto border-t border-gray-800">
-                <a
-                  href="https://github.com/rftrombeta/sdet-robot-automation-project"
-                  target="_blank"
-                  class="text-white text-sm font-medium flex items-center group-hover:text-blue-400 transition pt-4"
-                >
-                  Ver Repositório <span class="ml-2">→</span>
-                </a>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Velo: Web Automation & App
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Projeto autossuficiente onde a automação reside no mesmo
+                repositório da aplicação. Garantia de feedback instantâneo no
+                ciclo de dev.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-orange-500/10 text-orange-500 text-xs rounded">Playwright</span>
+                <span class="px-2 py-1 bg-orange-500/10 text-orange-500 text-xs rounded">Integrated</span>
               </div>
             </div>
-
-            <div class="flex flex-col gap-8">
-              <div
-                class="bg-gray-800/30 rounded-xl border border-dashed border-gray-700 p-6 flex flex-col justify-center flex-grow"
-              >
-                <div class="flex justify-between items-start mb-3">
-                  <h3 class="text-lg font-bold text-gray-500">TS Core Lib</h3>
-                  <span class="badge-soon">SOON</span>
-                </div>
-                <p class="text-gray-500 text-xs">
-                  Futura biblioteca NPM centralizando inteligência de testes em
-                  Node.js.
-                </p>
-              </div>
-              <div
-                class="bg-gray-800/30 rounded-xl border border-dashed border-gray-700 p-6 flex flex-col justify-center flex-grow"
-              >
-                <div class="flex justify-between items-start mb-3">
-                  <h3 class="text-lg font-bold text-gray-500">
-                    Playwright API
-                  </h3>
-                  <span class="badge-soon">SOON</span>
-                </div>
-                <p class="text-gray-500 text-xs">
-                  Framework de alta performance com validação de Schema e
-                  Playwright.
-                </p>
-              </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/rftrombeta/velo" target="_blank"
+                class="text-white text-sm font-medium flex items-center group-hover:text-orange-500 transition">
+                Ver Repositório <span class="ml-2">→</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section id="arquitetura" class="py-20 bg-gray-800/30">
-      <div class="max-w-5xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6">Arquitetura de Automação SDET</h2>
-        <p class="text-gray-400 mb-10 max-w-3xl mx-auto">
-          Visão de integração entre Shared Libraries e Clientes de Teste.
-        </p>
-        <div
-          class="bg-gray-900 p-6 md:p-10 rounded-3xl border border-gray-800 overflow-x-auto shadow-2xl"
-        >
-          <pre class="mermaid">
+      <div>
+        <h3 class="text-xl font-bold mb-6 flex items-center text-blue-400">
+          <span class="mr-3">🏗️</span> Estratégia: Shared Libraries (Scalable
+          Ecosystem)
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition group flex flex-col">
+            <div class="p-6 flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <div class="text-blue-500 text-2xl">🐍</div>
+                <a href="https://github.com/rftrombeta/sdet-python-automation-core" target="_blank"
+                  class="text-gray-400 hover:text-white transition">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.412-4.041-1.412-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Python Core Lib
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Shared Library centralizada com Pydantic e Faker para
+                validação de contratos e massa de dados.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-blue-500/10 text-blue-500 text-xs rounded">Core Lib</span>
+                <span class="px-2 py-1 bg-blue-500/10 text-blue-500 text-xs rounded">Shared</span>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto border-t border-gray-800">
+              <a href="https://github.com/rftrombeta/sdet-python-automation-core" target="_blank"
+                class="text-white text-sm font-medium flex items-center group-hover:text-blue-400 transition pt-4">
+                Ver Repositório <span class="ml-2">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500 transition group flex flex-col">
+            <div class="p-6 flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <div class="text-blue-500 text-2xl">🤖</div>
+                <a href="https://github.com/rftrombeta/sdet-robot-automation-project" target="_blank"
+                  class="text-gray-400 hover:text-white transition">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.412-4.041-1.412-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Robot Test Runner
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Suíte de testes que importa a Python Core Lib via Git,
+                isolando a lógica de negócio da infraestrutura.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-blue-500/10 text-blue-500 text-xs rounded">Robot</span>
+                <span class="px-2 py-1 bg-blue-500/10 text-blue-500 text-xs rounded">Consumer</span>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto border-t border-gray-800">
+              <a href="https://github.com/rftrombeta/sdet-robot-automation-project" target="_blank"
+                class="text-white text-sm font-medium flex items-center group-hover:text-blue-400 transition pt-4">
+                Ver Repositório <span class="ml-2">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-8">
+            <div
+              class="bg-gray-800/30 rounded-xl border border-dashed border-gray-700 p-6 flex flex-col justify-center flex-grow">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-lg font-bold text-gray-500">TS Core Lib</h3>
+                <span class="badge-soon">SOON</span>
+              </div>
+              <p class="text-gray-500 text-xs">
+                Futura biblioteca NPM centralizando inteligência de testes em
+                Node.js.
+              </p>
+            </div>
+            <div
+              class="bg-gray-800/30 rounded-xl border border-dashed border-gray-700 p-6 flex flex-col justify-center flex-grow">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-lg font-bold text-gray-500">
+                  Playwright API
+                </h3>
+                <span class="badge-soon">SOON</span>
+              </div>
+              <p class="text-gray-500 text-xs">
+                Framework de alta performance com validação de Schema e
+                Playwright.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="arquitetura" class="py-20 bg-gray-800/30">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Arquitetura de Automação SDET</h2>
+      <p class="text-gray-400 mb-10 max-w-3xl mx-auto">
+        Visão de integração entre Shared Libraries e Clientes de Teste.
+      </p>
+      <div class="bg-gray-900 p-6 md:p-10 rounded-3xl border border-gray-800 overflow-x-auto shadow-2xl">
+        <pre class="mermaid">
                     graph TD
                     subgraph "Estratégia 1: Co-location (Velo)"
                         App[Web Application - src]
@@ -531,51 +433,38 @@
                     style Robot fill:#3776ab,stroke:#fff,color:#fff
                     style API fill:#f39c12,stroke:#333,color:#fff
                     style WEB fill:#f39c12,stroke:#333,color:#fff
-                </pre
-          >
-        </div>
+                </pre>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contato" class="py-20">
-      <div class="max-w-xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-12">Contato</h2>
-        <div class="grid grid-cols-1 gap-4">
-          <a
-            href="https://www.linkedin.com/in/rodrigo-trombeta-21b89252"
-            target="_blank"
-            class="bg-orange-600 hover:bg-orange-700 p-5 rounded-xl text-white font-bold transition shadow-lg shadow-orange-900/20"
-          >
-            Conectar no LinkedIn
-          </a>
-          <a
-            href="https://github.com/rftrombeta"
-            target="_blank"
-            class="bg-gray-800 p-5 rounded-xl hover:bg-gray-700 border border-gray-700 transition"
-            >GitHub</a
-          >
-          <a
-            href="mailto:rftrombeta@gmail.com"
-            class="p-5 text-orange-500 font-bold"
-            >rftrombeta@gmail.com</a
-          >
-        </div>
+  <section id="contato" class="py-20">
+    <div class="max-w-xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Contato</h2>
+      <div class="grid grid-cols-1 gap-4">
+        <a href="https://www.linkedin.com/in/rodrigo-trombeta-21b89252" target="_blank"
+          class="bg-orange-600 hover:bg-orange-700 p-5 rounded-xl text-white font-bold transition shadow-lg shadow-orange-900/20">
+          Conectar no LinkedIn
+        </a>
+        <a href="https://github.com/rftrombeta" target="_blank"
+          class="bg-gray-800 p-5 rounded-xl hover:bg-gray-700 border border-gray-700 transition">GitHub</a>
+        <a href="mailto:rftrombeta@gmail.com" class="p-5 text-orange-500 font-bold">rftrombeta@gmail.com</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer
-      class="py-12 text-center text-gray-600 text-sm border-t border-gray-800"
-    >
-      © 2026 Rodrigo Trombeta • SDET Architect • Built with Tailwind
-    </footer>
+  <footer class="py-12 text-center text-gray-600 text-sm border-t border-gray-800">
+    © 2026 Rodrigo Trombeta • SDET Architect • Built with Tailwind
+  </footer>
 
-    <script type="module">
-      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
-      mermaid.initialize({
-        startOnLoad: true,
-        theme: "dark",
-        securityLevel: "loose",
-      });
-    </script>
-  </body>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "dark",
+      securityLevel: "loose",
+    });
+  </script>
+</body>
+
 </html>
