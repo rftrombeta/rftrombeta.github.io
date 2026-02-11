@@ -1,0 +1,40 @@
+<section id="arquitetura" class="py-20 bg-gray-800/30">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Arquitetura de Automacao SDET</h2>
+    <p class="text-gray-400 mb-10 max-w-3xl mx-auto">
+      Visao de integracao entre Shared Libraries e Clientes de Teste.
+    </p>
+    <div class="bg-gray-900 p-6 md:p-10 rounded-3xl border border-gray-800 overflow-x-auto shadow-2xl">
+      <pre class="mermaid">
+                    graph TD
+                    subgraph "Estrategia 1: Co-location (Velo)"
+                        App[Web Application - src]
+                        VeloTests[Playwright Suite - playwright/]
+                        App <-->|Local Dev Loop| VeloTests
+                    end
+
+                    subgraph "Estrategia 2: Shared Libraries (Scalable)"
+                        PyCore[Python Core Lib]
+                        Robot[Robot Framework Runner]
+                        PyCore --- Models[Pydantic / Faker]
+                        Robot -->|Consome via Git| PyCore
+                    end
+
+                    subgraph "Camada de Target (SUT)"
+                        API((ServeRest API))
+                        WEB((Velo Interface))
+                    end
+
+                    VeloTests -->|Valida| WEB
+                    Robot -->|Valida| API
+
+                    style App fill:#2d3748,stroke:#4a5568,color:#fff
+                    style VeloTests fill:#ea580c,stroke:#fff,color:#fff
+                    style PyCore fill:#3178c6,stroke:#fff,color:#fff
+                    style Robot fill:#3776ab,stroke:#fff,color:#fff
+                    style API fill:#f39c12,stroke:#333,color:#fff
+                    style WEB fill:#f39c12,stroke:#333,color:#fff
+                </pre>
+    </div>
+  </div>
+</section>

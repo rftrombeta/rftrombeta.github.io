@@ -1,10 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
 /* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background: #f4f4f4;
+    font-family: "Inter", sans-serif;
     line-height: 1.6;
 }
 
@@ -164,4 +164,17 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+}
+
+.mermaid svg {
+    margin: 0 auto;
+}
+
+.badge-soon {
+    background: #f39c12;
+    color: #000;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
 }
