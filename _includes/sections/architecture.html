@@ -39,6 +39,16 @@
                         POM --> Client
                     end
 
+                    subgraph "Strategy 4: Cucumber E2E"
+                      Features["🥒 Feature Files"]
+                      Steps["🧩 Step Definitions"]
+                      E2EPOM["🧱 Page Objects"]
+                      E2EEngine["🎭 Playwright Engine"]
+                      Features --> Steps
+                      Steps --> E2EPOM
+                      E2EPOM --> E2EEngine
+                    end
+
                     subgraph "Strategy 2: Robot Framework"
                         Runner["🤖 Robot Framework<br/>Runner"]
                         Suites["Test Suites"]
@@ -53,7 +63,7 @@
 
                     subgraph "Targets"
                         TargetAPI["🎯 Target API"]
-                        VWeb["🌐 Velo<br/>Interface"]
+                      VWeb["🌐 Interface Web"]
                         ServeRest["🔗 ServeRest API"]
                     end
                         
@@ -77,11 +87,14 @@
                     Runner -->|Usa| Core
                     
                     VTests -->|Valida| VWeb
+                    E2EEngine -->|Valida| VWeb
                     Suites -->|Valida| ServeRest
                     Client -->|Chama| TargetAPI
                     
                     CI -->|Executa| Tests
+                    CI -->|Executa| Features
                     Tests --> Report
+                    Features --> Report
 
                     style Core fill:#3178c6,stroke:#60a5fa,color:#fff,stroke-width:3px
                     style Models fill:#2d3748,stroke:#60a5fa,color:#fff
@@ -99,6 +112,10 @@
                     style Tests fill:#10b981,stroke:#fff,color:#fff
                     style POM fill:#059669,stroke:#fff,color:#fff
                     style Client fill:#059669,stroke:#fff,color:#fff
+                    style Features fill:#10b981,stroke:#fff,color:#fff
+                    style Steps fill:#059669,stroke:#fff,color:#fff
+                    style E2EPOM fill:#047857,stroke:#fff,color:#fff
+                    style E2EEngine fill:#0f766e,stroke:#fff,color:#fff
                     style TargetAPI fill:#f39c12,stroke:#333,color:#fff
                     
                     style CI fill:#6366f1,stroke:#fff,color:#fff
@@ -200,6 +217,38 @@
                     style Tests fill:#10b981,stroke:#fff,color:#fff
                     style POM fill:#059669,stroke:#fff,color:#fff
                     style API fill:#f39c12,stroke:#333,color:#fff
+                </pre>
+      </div>
+    </template>
+
+    <template id="arch-playwright-cucumber-e2e">
+      <h4 class="text-xl font-bold mb-4 text-emerald-300">Playwright + Cucumber E2E</h4>
+      <div class="bg-gray-900 p-6 md:p-8 rounded-2xl border border-gray-800 overflow-x-auto">
+        <pre class="mermaid">
+                    graph TD
+                    Features[Feature Files .feature]
+                    Steps[Step Definitions]
+                    Hooks[Hooks / Fixtures]
+                    POM[Page Objects]
+                    PW[Playwright Engine]
+                    Web((Aplicacao Web))
+                    CI[CI Pipeline]
+                    Report[Relatorios]
+
+                    Features --> Steps
+                    Steps --> Hooks
+                    Steps --> POM
+                    Hooks --> PW
+                    POM --> PW
+                    PW --> Web
+                    CI --> Features
+                    CI --> Report
+
+                    style Features fill:#10b981,stroke:#fff,color:#fff
+                    style Steps fill:#059669,stroke:#fff,color:#fff
+                    style POM fill:#047857,stroke:#fff,color:#fff
+                    style PW fill:#0f766e,stroke:#fff,color:#fff
+                    style Web fill:#f39c12,stroke:#333,color:#fff
                 </pre>
       </div>
     </template>
