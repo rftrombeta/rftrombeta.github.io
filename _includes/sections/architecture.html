@@ -196,6 +196,26 @@
       </div>
     </template>
 
+    <template id="arch-ts-core">
+      <h4 class="text-xl font-bold mb-4 text-blue-400">TS Core Lib</h4>
+      <div class="bg-gray-900 p-6 md:p-8 rounded-2xl border border-gray-800 overflow-x-auto">
+        <pre class="mermaid">
+                    graph TD
+                    Core[TS Core Lib]
+                    Types[TypeScript Types]
+                    Utils[Utils & Helpers]
+                    Consumer[NPM Consumers]
+
+                    Core --> Types
+                    Core --> Utils
+                    Consumer -->|Importa via NPM| Core
+
+                    style Core fill:#3178c6,stroke:#fff,color:#fff
+                    style Consumer fill:#3178c6,stroke:#fff,color:#fff
+        </pre>
+      </div>
+    </template>
+
     <template id="arch-playwright-api">
       <h4 class="text-xl font-bold mb-4 text-emerald-300">Playwright API Automation</h4>
       <div class="bg-gray-900 p-6 md:p-8 rounded-2xl border border-gray-800 overflow-x-auto">
