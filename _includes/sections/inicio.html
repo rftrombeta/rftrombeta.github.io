@@ -1,0 +1,116 @@
+<header class="pt-32 pb-20 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6">Rodrigo Trombeta</h1>
+    <h2 class="text-2xl md:text-3xl text-orange-500 font-light mb-8">
+      SDET & Test Architect
+    </h2>
+
+    <div class="flex flex-wrap justify-center gap-3 mb-10">
+      <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">SDET Specialist</span>
+      <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">Test Architect</span>
+      <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">Shared Libraries</span>
+      <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">Playwright</span>
+      <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">Robot Framework</span>
+      <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">Intelligent Testing</span>
+    </div>
+
+    <div class="mb-12 relative inline-block group">
+      <a href="https://bcr.bstqb.org.br/validate/26-CTFL-15124-BR" target="_blank" rel="noopener noreferrer"
+        title="Certified Tester Foundation Level - ISTQB"
+        class="no-underline inline-flex items-center gap-3 px-4 py-2 bg-gray-800/30 border border-gray-700/50 rounded-xl hover:border-orange-500/50 hover:scale-105 transition">
+        <span
+          class="h-7 min-w-7 px-2 rounded-md border border-gray-700 bg-gray-900 text-[10px] font-bold tracking-wider text-gray-300 inline-flex items-center justify-center group-hover:text-orange-500 transition">
+          ISTQB
+        </span>
+        <div class="text-left border-l border-gray-700 pl-3">
+          <span class="block text-[10px] text-gray-500 uppercase leading-none font-bold mb-1">Validation
+            Verified</span>
+          <span
+            class="text-sm text-gray-300 group-hover:text-orange-500 transition font-semibold tracking-wide">ISTQB
+            CTFL</span>
+        </div>
+      </a>
+
+      <button type="button" aria-label="Ampliar certificação ISTQB"
+        onclick="openCertPreview(event)"
+        class="absolute left-1/2 top-0 z-20 hidden -translate-x-1/2 -translate-y-[105%] rounded-xl border border-orange-500/40 bg-gray-900/95 p-2 shadow-2xl shadow-orange-900/30 group-hover:block cursor-zoom-in">
+        <img src="/assets/img/cert-ctfl.jpg" alt="Certificação ISTQB CTFL" class="h-auto w-64 rounded-md cursor-zoom-in" />
+      </button>
+      
+      <p class="absolute left-1/2 -translate-x-1/2 mt-2 text-xs text-gray-500 whitespace-nowrap">
+        Clique no selo para validar • Passe o mouse para pré-visualizar
+      </p>
+    </div>
+  </div>
+</header>
+
+<div id="cert-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 px-4 py-4"
+  onclick="closeCertPreview()">
+  <div class="absolute top-4 right-4 flex items-center gap-2" onclick="event.stopPropagation()">
+    <button type="button" onclick="zoomCertOut()"
+      class="h-9 w-9 rounded-md border border-gray-600 bg-gray-900 text-white hover:border-orange-500 transition">−</button>
+    <button type="button" onclick="resetCertZoom()"
+      class="rounded-md border border-gray-600 bg-gray-900 px-3 h-9 text-sm text-white hover:border-orange-500 transition">100%</button>
+    <button type="button" onclick="zoomCertIn()"
+      class="h-9 w-9 rounded-md border border-gray-600 bg-gray-900 text-white hover:border-orange-500 transition">+</button>
+    <button type="button" onclick="closeCertPreview()"
+      class="h-9 w-9 rounded-md border border-gray-600 bg-gray-900 text-white hover:border-orange-500 transition">×</button>
+  </div>
+
+  <img id="cert-preview-image" src="/assets/img/cert-ctfl.jpg" alt="Certificação ISTQB CTFL"
+    class="max-w-[92vw] max-h-[88vh] object-contain rounded-lg shadow-2xl transition-transform duration-200"
+    style="transform: scale(1);" onclick="event.stopPropagation()" />
+</div>
+
+<script>
+  let certZoom = 1;
+
+  function applyCertZoom() {
+    const image = document.getElementById('cert-preview-image');
+    if (!image) return;
+    image.style.transform = `scale(${certZoom})`;
+  }
+
+  function openCertPreview(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    certZoom = 1;
+    applyCertZoom();
+    const lightbox = document.getElementById('cert-lightbox');
+    if (!lightbox) return;
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+  }
+
+  function closeCertPreview() {
+    const lightbox = document.getElementById('cert-lightbox');
+    if (!lightbox) return;
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+  }
+
+  function zoomCertIn() {
+    certZoom = Math.min(3, +(certZoom + 0.2).toFixed(2));
+    applyCertZoom();
+  }
+
+  function zoomCertOut() {
+    certZoom = Math.max(0.6, +(certZoom - 0.2).toFixed(2));
+    applyCertZoom();
+  }
+
+  function resetCertZoom() {
+    certZoom = 1;
+    applyCertZoom();
+  }
+
+  document.addEventListener('keydown', (e) => {
+    const lightbox = document.getElementById('cert-lightbox');
+    if (!lightbox || lightbox.classList.contains('hidden')) return;
+
+    if (e.key === 'Escape') closeCertPreview();
+    if (e.key === '+') zoomCertIn();
+    if (e.key === '-') zoomCertOut();
+    if (e.key === '0') resetCertZoom();
+  });
+</script>

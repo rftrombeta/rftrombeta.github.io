@@ -178,3 +178,81 @@ body {
     font-size: 11px;
     font-weight: bold;
 }
+
+/* ========== REMOVER SUBLINHADO EM LINKS DE PORTFÓLIO ========== */
+
+/* Regra ULTRA-agressiva: Remove text-decoration de link tags */
+section#projetos a,
+section#contato a {
+    text-decoration: none !important;
+    text-decoration-thickness: 0 !important;
+    text-decoration-skip-ink: none !important;
+    text-decoration-line: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+}
+
+/* Todos os pseudo-estados */
+section#projetos a:link,
+section#projetos a:visited,
+section#projetos a:hover,
+section#projetos a:focus,
+section#projetos a:active,
+section#contato a:link,
+section#contato a:visited,
+section#contato a:hover,
+section#contato a:focus,
+section#contato a:active {
+    text-decoration: none !important;
+    text-decoration-thickness: 0 !important;
+    text-decoration-line: none !important;
+    border-bottom: none !important;
+}
+
+/* Remove de pseudo-elementos também */
+section#projetos a::before,
+section#projetos a::after,
+section#contato a::before,
+section#contato a::after {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/* Force-kill em TODOS os elementos filhos */
+section#projetos a *,
+section#contato a * {
+    text-decoration: none !important;
+    text-decoration-thickness: 0 !important;
+    text-decoration-line: none !important;
+    border-bottom: none !important;
+}
+
+/* Força extra em elementos de texto comuns */
+section#projetos p, section#projetos span, section#projetos div,
+section#contato p, section#contato span, section#contato div {
+    text-decoration: none !important;
+    text-decoration-thickness: 0 !important;
+}
+
+/* Class-specific override - project cards */
+.project-card-link {
+    text-decoration: none !important;
+    text-decoration-thickness: 0 !important;
+    border-bottom: none !important;
+}
+
+.project-card-link,
+.project-card-link:link,
+.project-card-link:visited,
+.project-card-link:hover,
+.project-card-link:focus,
+.project-card-link:active {
+    text-decoration: none !important;
+}
+
+.project-card-link *,
+.project-card-link::before,
+.project-card-link::after {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}

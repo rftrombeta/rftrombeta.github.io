@@ -1,0 +1,206 @@
+<section id="arquitetura" class="py-20 bg-gray-800/30">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-4 text-center text-white">
+      Estratégias de Arquitetura SDET
+    </h2>
+    <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+      Comparação técnica de abordagens arquiteturais implementadas, critérios de decisão e trade-offs de cada estratégia.
+    </p>
+
+    <!-- Grid de Estratégias -->
+    <div class="grid md:grid-cols-3 gap-6 mb-16">
+      <!-- Co-location -->
+      <div class="bg-gray-900 rounded-xl p-6 border border-orange-500/30 hover:border-orange-500 transition-all">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">🔗</span>
+          <h3 class="text-xl font-bold text-orange-500">Co-location</h3>
+        </div>
+        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+          Testes e aplicação no mesmo repositório, com feedback instantâneo no ciclo de desenvolvimento.
+        </p>
+        <div class="space-y-2 mb-4">
+          <div class="flex items-start">
+            <span class="text-green-400 mr-2">✓</span>
+            <span class="text-xs text-gray-400">Feedback rápido</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-green-400 mr-2">✓</span>
+            <span class="text-xs text-gray-400">Evolução sincronizada</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-yellow-400 mr-2">△</span>
+            <span class="text-xs text-gray-400">Acoplamento intencional</span>
+          </div>
+        </div>
+        <a href="https://github.com/rftrombeta/velo" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center text-orange-500 hover:text-orange-400 text-sm font-medium">
+          Ver projeto <span class="ml-1">→</span>
+        </a>
+      </div>
+
+      <!-- Shared Libraries -->
+      <div class="bg-gray-900 rounded-xl p-6 border border-blue-500/30 hover:border-blue-500 transition-all">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">🏗️</span>
+          <h3 class="text-xl font-bold text-blue-400">Shared Libraries</h3>
+        </div>
+        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+          Bibliotecas centralizadas versionadas, promovendo reúso e consistência entre múltiplos projetos.
+        </p>
+        <div class="space-y-2 mb-4">
+          <div class="flex items-start">
+            <span class="text-green-400 mr-2">✓</span>
+            <span class="text-xs text-gray-400">Reúso entre suítes</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-green-400 mr-2">✓</span>
+            <span class="text-xs text-gray-400">Contratos versionados</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-yellow-400 mr-2">△</span>
+            <span class="text-xs text-gray-400">Gestão de dependências</span>
+          </div>
+        </div>
+        <div class="flex gap-3 text-sm">
+          <a href="https://github.com/rftrombeta/sdet-python-automation-core" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+            Python Core <span class="ml-1">→</span>
+          </a>
+          <a href="https://github.com/rftrombeta/sdet-typescript-automation-core" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+            TS Core <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Framework Modular -->
+      <div class="bg-gray-900 rounded-xl p-6 border border-emerald-500/30 hover:border-emerald-500 transition-all">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">🧩</span>
+          <h3 class="text-xl font-bold text-emerald-400">Framework Modular</h3>
+        </div>
+        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+          Estrutura baseada em camadas (POM, helpers, fixtures) para escalabilidade e manutenção de longo prazo.
+        </p>
+        <div class="space-y-2 mb-4">
+          <div class="flex items-start">
+            <span class="text-green-400 mr-2">✓</span>
+            <span class="text-xs text-gray-400">Separação de camadas</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-green-400 mr-2">✓</span>
+            <span class="text-xs text-gray-400">Escalabilidade</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-yellow-400 mr-2">△</span>
+            <span class="text-xs text-gray-400">Overhead inicial</span>
+          </div>
+        </div>
+        <div class="flex gap-3 text-sm">
+          <a href="https://github.com/rftrombeta/playwright-api-testing" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium">
+            POM <span class="ml-1">→</span>
+          </a>
+          <a href="https://github.com/rftrombeta/playwright-cucumber-e2e-testing" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium">
+            BDD <span class="ml-1">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Critérios de Decisão -->
+    <div class="bg-gray-900 rounded-xl p-8 border border-gray-800 mb-16">
+      <h3 class="text-2xl font-bold mb-6 text-white">Critérios de Decisão Arquitetural</h3>
+      
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-800">
+              <th class="text-left py-3 px-4 text-gray-400 font-semibold">Critério</th>
+              <th class="text-center py-3 px-4 text-orange-500 font-semibold">Co-location</th>
+              <th class="text-center py-3 px-4 text-blue-400 font-semibold">Shared Libs</th>
+              <th class="text-center py-3 px-4 text-emerald-400 font-semibold">Modular</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-300">
+            <tr class="border-b border-gray-800/50">
+              <td class="py-3 px-4">Velocidade de feedback</td>
+              <td class="text-center py-3 px-4">🟢 Alta</td>
+              <td class="text-center py-3 px-4">🟡 Média</td>
+              <td class="text-center py-3 px-4">🟡 Média</td>
+            </tr>
+            <tr class="border-b border-gray-800/50">
+              <td class="py-3 px-4">Reúso entre projetos</td>
+              <td class="text-center py-3 px-4">🔴 Baixo</td>
+              <td class="text-center py-3 px-4">🟢 Alto</td>
+              <td class="text-center py-3 px-4">🟡 Médio</td>
+            </tr>
+            <tr class="border-b border-gray-800/50">
+              <td class="py-3 px-4">Complexidade setup</td>
+              <td class="text-center py-3 px-4">🟢 Baixa</td>
+              <td class="text-center py-3 px-4">🟡 Média</td>
+              <td class="text-center py-3 px-4">🔴 Alta</td>
+            </tr>
+            <tr class="border-b border-gray-800/50">
+              <td class="py-3 px-4">Manutenibilidade longo prazo</td>
+              <td class="text-center py-3 px-4">🟡 Média</td>
+              <td class="text-center py-3 px-4">🟢 Alta</td>
+              <td class="text-center py-3 px-4">🟢 Alta</td>
+            </tr>
+            <tr class="border-b border-gray-800/50">
+              <td class="py-3 px-4">Indicado para times distribuídos</td>
+              <td class="text-center py-3 px-4">🔴 Não</td>
+              <td class="text-center py-3 px-4">🟢 Sim</td>
+              <td class="text-center py-3 px-4">🟢 Sim</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4">Acoplamento</td>
+              <td class="text-center py-3 px-4">🟡 Intencional</td>
+              <td class="text-center py-3 px-4">🟢 Desacoplado</td>
+              <td class="text-center py-3 px-4">🟢 Desacoplado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Quando usar cada uma -->
+    <div class="bg-gray-900 rounded-xl p-8 border border-gray-800">
+      <h3 class="text-2xl font-bold mb-6 text-white">Quando Usar Cada Estratégia</h3>
+      
+      <div class="space-y-6">
+        <div>
+          <h4 class="text-lg font-semibold text-orange-500 mb-2">🔗 Co-location</h4>
+          <ul class="text-gray-400 text-sm space-y-1 ml-6 list-disc">
+            <li>Produtos com equipe única (dev + QA integrados)</li>
+            <li>Alta frequência de mudanças na interface/contrato</li>
+            <li>Necessidade de validação em tempo de desenvolvimento</li>
+            <li>Startups ou squads autônomos com ciclo rápido</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold text-blue-400 mb-2">🏗️ Shared Libraries</h4>
+          <ul class="text-gray-400 text-sm space-y-1 ml-6 list-disc">
+            <li>Múltiplas suítes de teste consumindo mesma lógica</li>
+            <li>Contratos estáveis que precisam ser reutilizados</li>
+            <li>Times distribuídos com necessidade de consistência</li>
+            <li>Ecossistema maduro com alto volume de automação</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold text-emerald-400 mb-2">🧩 Framework Modular</h4>
+          <ul class="text-gray-400 text-sm space-y-1 ml-6 list-disc">
+            <li>Projetos de longo prazo com alta complexidade</li>
+            <li>Necessidade de separação clara entre camadas</li>
+            <li>Ambiente regulado com auditoria de cobertura</li>
+            <li>Suítes E2E ou de regressão extensas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
