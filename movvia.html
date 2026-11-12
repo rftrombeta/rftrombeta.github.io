@@ -1,0 +1,83 @@
+---
+layout: default
+title: Movvia — estudo de caso
+description: "Estudo de caso do Movvia, produto próprio SaaS B2B em fase piloto para gestão de frotas e operações"
+---
+
+{% include sections/navegacao.html %}
+
+<main id="conteudo" class="mx-auto max-w-5xl px-6 pb-20 pt-32" tabindex="-1">
+  <p class="mb-4 text-sm font-semibold uppercase tracking-wide text-orange-300">Estudo de caso · Produto próprio</p>
+  <h1 class="mb-5 text-4xl font-bold text-white sm:text-5xl">Movvia</h1>
+  <p class="mb-8 max-w-3xl text-lg leading-relaxed text-gray-300">
+    SaaS B2B para gestão de frotas e operações, desenvolvido para apoiar a organização de rotinas operacionais em um contexto multiempresa.
+  </p>
+  <p class="mb-12 inline-flex rounded-full border border-orange-400/40 bg-orange-400/10 px-4 py-2 text-sm font-semibold text-orange-200">
+    Estado: fase piloto
+  </p>
+
+  <div class="space-y-10">
+    <section aria-labelledby="movvia-contexto">
+      <h2 id="movvia-contexto" class="mb-3 text-2xl font-bold text-white">Problema e contexto</h2>
+      <p class="max-w-3xl leading-relaxed text-gray-300">
+        O produto se concentra na gestão de frotas e operações empresariais. O contexto multiempresa traz requisitos de organização por empresa e controle de acesso que orientam a evolução da plataforma.
+      </p>
+    </section>
+
+    <section aria-labelledby="movvia-escopo">
+      <h2 id="movvia-escopo" class="mb-3 text-2xl font-bold text-white">Solução e escopo</h2>
+      <p class="max-w-3xl leading-relaxed text-gray-300">
+        O Movvia evolui incrementalmente por módulos operacionais. Recibos P1 possui histórico de publicação e validação em piloto informado pelo proprietário; esse histórico não representa homologação integral do produto.
+      </p>
+    </section>
+
+    <section aria-labelledby="movvia-arquitetura">
+      <h2 id="movvia-arquitetura" class="mb-3 text-2xl font-bold text-white">Arquitetura e tecnologias</h2>
+      <p class="mb-4 max-w-3xl leading-relaxed text-gray-300">
+        A stack informada para o checkout é Next.js, React, TypeScript e Supabase/PostgreSQL. A arquitetura multiempresa e o controle de acesso são áreas centrais da solução.
+      </p>
+      <ul class="flex flex-wrap gap-2" aria-label="Tecnologias do checkout Movvia">
+        <li class="rounded-full bg-gray-800 px-3 py-1 text-sm text-gray-200">Next.js</li>
+        <li class="rounded-full bg-gray-800 px-3 py-1 text-sm text-gray-200">React</li>
+        <li class="rounded-full bg-gray-800 px-3 py-1 text-sm text-gray-200">TypeScript</li>
+        <li class="rounded-full bg-gray-800 px-3 py-1 text-sm text-gray-200">Supabase/PostgreSQL</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="movvia-decisoes">
+      <h2 id="movvia-decisoes" class="mb-3 text-2xl font-bold text-white">Desafios e decisões de engenharia</h2>
+      <p class="max-w-3xl leading-relaxed text-gray-300">
+        O trabalho destaca a arquitetura multiempresa, o controle de acesso e a evolução incremental dos módulos operacionais. Essas decisões são tratadas junto à engenharia de qualidade, sem presumir que todos os módulos estejam concluídos.
+      </p>
+    </section>
+
+    <section aria-labelledby="movvia-qualidade">
+      <h2 id="movvia-qualidade" class="mb-3 text-2xl font-bold text-white">Qualidade e validação</h2>
+      <p class="max-w-3xl leading-relaxed text-gray-300">
+        O processo inclui CI e validações de banco. O estado piloto e o histórico específico de Recibos P1 não comprovam homologação integral nem validação global de segurança.
+      </p>
+    </section>
+
+    <section aria-labelledby="movvia-ia">
+      <h2 id="movvia-ia" class="mb-3 text-2xl font-bold text-white">Desenvolvimento assistido por IA</h2>
+      <p class="max-w-3xl leading-relaxed text-gray-300">
+        O desenvolvimento do produto utiliza assistência de IA com supervisão técnica humana, conforme informado pelo proprietário.
+      </p>
+    </section>
+
+    <section aria-labelledby="movvia-proximos-passos">
+      <h2 id="movvia-proximos-passos" class="mb-3 text-2xl font-bold text-white">Estado atual e próximos passos</h2>
+      <p class="max-w-3xl leading-relaxed text-gray-300">
+        O Movvia permanece em fase piloto e segue em evolução incremental. A descrição pública mantém esse status sem inferir resultados comerciais ou conclusão de funcionalidades.
+      </p>
+    </section>
+  </div>
+
+  <nav aria-label="Navegação do estudo de caso" class="mt-14 flex flex-wrap gap-5 border-t border-gray-800 pt-6 text-sm font-semibold">
+    <a class="text-orange-300 underline decoration-orange-300/50 underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-300 focus-visible:outline-offset-4" href="/projetos.html#projetos">Voltar a Projetos</a>
+    <a class="text-orange-300 underline decoration-orange-300/50 underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-300 focus-visible:outline-offset-4" href="/imobilis.html">Estudo de caso Imobilis</a>
+    <a class="text-orange-300 underline decoration-orange-300/50 underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-300 focus-visible:outline-offset-4" href="https://movvia-web.vercel.app" target="_blank" rel="noopener noreferrer">Visitar site oficial</a>
+  </nav>
+</main>
+
+{% include sections/rodape.html %}

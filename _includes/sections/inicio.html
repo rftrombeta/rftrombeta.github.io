@@ -14,10 +14,10 @@
       <span class="px-4 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">Intelligent Testing</span>
     </div>
 
-    <div class="mb-12 relative inline-block group">
+    <div class="mb-12 flex w-full flex-col items-center gap-3">
       <a href="https://bcr.bstqb.org.br/validate/26-CTFL-15124-BR" target="_blank" rel="noopener noreferrer"
         title="Certified Tester Foundation Level - ISTQB"
-        class="no-underline inline-flex items-center gap-3 px-4 py-2 bg-gray-800/30 border border-gray-700/50 rounded-xl hover:border-orange-500/50 hover:scale-105 transition">
+        class="group no-underline inline-flex items-center gap-3 px-4 py-2 bg-gray-800/30 border border-gray-700/50 rounded-xl hover:border-orange-500/50 hover:scale-105 transition">
         <span
           class="h-7 min-w-7 px-2 rounded-md border border-gray-700 bg-gray-900 text-[10px] font-bold tracking-wider text-gray-300 inline-flex items-center justify-center group-hover:text-orange-500 transition">
           ISTQB
@@ -31,39 +31,41 @@
         </div>
       </a>
 
-      <button type="button" aria-label="Ampliar certificação ISTQB"
-        onclick="openCertPreview(event)"
-        class="absolute left-1/2 top-0 z-20 hidden -translate-x-1/2 -translate-y-[105%] rounded-xl border border-orange-500/40 bg-gray-900/95 p-2 shadow-2xl shadow-orange-900/30 group-hover:block cursor-zoom-in">
-        <img src="/assets/img/cert-ctfl.jpg" alt="Certificação ISTQB CTFL" class="h-auto w-64 rounded-md cursor-zoom-in" />
+      <button type="button" aria-label="Abrir prévia do certificado ISTQB CTFL" onclick="openCertPreview(event)"
+        class="cert-preview-trigger inline-flex items-center rounded-xl border border-orange-500/40 bg-gray-900/95 px-4 py-2 text-sm text-gray-200 hover:border-orange-500 transition">
+        Visualizar certificado
       </button>
       
-      <p class="absolute left-1/2 -translate-x-1/2 mt-2 text-xs text-gray-500 whitespace-nowrap">
-        Clique no selo para validar • Passe o mouse para pré-visualizar
+      <p class="w-full px-2 text-center text-xs text-gray-500">
+        Use o selo para validar • Visualize o certificado pelo botão
       </p>
     </div>
   </div>
 </header>
 
-<div id="cert-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 px-4 py-4"
-  onclick="closeCertPreview()">
-  <div class="absolute top-4 right-4 flex items-center gap-2" onclick="event.stopPropagation()">
-    <button type="button" onclick="zoomCertOut()"
+<dialog id="cert-lightbox" aria-labelledby="cert-dialog-title"
+  class="cert-dialog fixed inset-0 z-50 m-0 flex-col items-center justify-center h-full w-full max-h-none max-w-none overflow-auto bg-black/90 px-4 py-4 text-white backdrop:bg-black/90"
+  onclick="handleCertDialogClick(event)" oncancel="handleCertDialogCancel(event)">
+  <h2 id="cert-dialog-title" class="sr-only">Prévia do certificado ISTQB CTFL</h2>
+  <div class="fixed inset-x-4 top-4 z-10 flex flex-wrap justify-end gap-2">
+    <button type="button" aria-label="Diminuir zoom" onclick="zoomCertOut()"
       class="h-9 w-9 rounded-md border border-gray-600 bg-gray-900 text-white hover:border-orange-500 transition">−</button>
-    <button type="button" onclick="resetCertZoom()"
-      class="rounded-md border border-gray-600 bg-gray-900 px-3 h-9 text-sm text-white hover:border-orange-500 transition">100%</button>
-    <button type="button" onclick="zoomCertIn()"
+    <button type="button" aria-label="Restaurar zoom para 100%" onclick="resetCertZoom()"
+      class="h-9 rounded-md border border-gray-600 bg-gray-900 px-3 text-sm text-white hover:border-orange-500 transition">100%</button>
+    <button type="button" aria-label="Ampliar zoom" onclick="zoomCertIn()"
       class="h-9 w-9 rounded-md border border-gray-600 bg-gray-900 text-white hover:border-orange-500 transition">+</button>
-    <button type="button" onclick="closeCertPreview()"
+    <button id="cert-dialog-close" type="button" aria-label="Fechar prévia do certificado" onclick="closeCertPreview()"
       class="h-9 w-9 rounded-md border border-gray-600 bg-gray-900 text-white hover:border-orange-500 transition">×</button>
   </div>
 
-  <img id="cert-preview-image" src="/assets/img/cert-ctfl.jpg" alt="Certificação ISTQB CTFL"
-    class="max-w-[92vw] max-h-[88vh] object-contain rounded-lg shadow-2xl transition-transform duration-200"
-    style="transform: scale(1);" onclick="event.stopPropagation()" />
-</div>
+  <img id="cert-preview-image" src="/assets/img/cert-ctfl.jpg" alt="Certificado ISTQB Certified Tester Foundation Level (CTFL)"
+    class="mx-auto block max-w-[92vw] max-h-[calc(88vh-3rem)] object-contain rounded-lg shadow-2xl transition-transform duration-200"
+    style="transform: scale(1);" />
+</dialog>
 
 <script>
   let certZoom = 1;
+  let certPreviewTrigger = null;
 
   function applyCertZoom() {
     const image = document.getElementById('cert-preview-image');
@@ -72,21 +74,30 @@
   }
 
   function openCertPreview(event) {
-    event.preventDefault();
-    event.stopPropagation();
     certZoom = 1;
     applyCertZoom();
     const lightbox = document.getElementById('cert-lightbox');
-    if (!lightbox) return;
-    lightbox.classList.remove('hidden');
-    lightbox.classList.add('flex');
+    if (!lightbox || lightbox.open) return;
+    certPreviewTrigger = event.currentTarget;
+    lightbox.showModal();
+    document.getElementById('cert-dialog-close').focus();
   }
 
   function closeCertPreview() {
     const lightbox = document.getElementById('cert-lightbox');
-    if (!lightbox) return;
-    lightbox.classList.add('hidden');
-    lightbox.classList.remove('flex');
+    if (!lightbox || !lightbox.open) return;
+    lightbox.close();
+    if (certPreviewTrigger && certPreviewTrigger.isConnected) certPreviewTrigger.focus();
+    certPreviewTrigger = null;
+  }
+
+  function handleCertDialogClick(event) {
+    if (event.target === event.currentTarget) closeCertPreview();
+  }
+
+  function handleCertDialogCancel(event) {
+    event.preventDefault();
+    closeCertPreview();
   }
 
   function zoomCertIn() {
@@ -106,9 +117,8 @@
 
   document.addEventListener('keydown', (e) => {
     const lightbox = document.getElementById('cert-lightbox');
-    if (!lightbox || lightbox.classList.contains('hidden')) return;
+    if (!lightbox || !lightbox.open) return;
 
-    if (e.key === 'Escape') closeCertPreview();
     if (e.key === '+') zoomCertIn();
     if (e.key === '-') zoomCertOut();
     if (e.key === '0') resetCertZoom();

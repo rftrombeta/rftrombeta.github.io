@@ -1,9 +1,13 @@
-<nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+<a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+<nav aria-label="Navegação principal" class="site-navigation sticky top-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center">
     <a href="/" class="text-xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
       Rodrigo Trombeta
     </a>
-    <div class="hidden md:flex space-x-6 text-sm font-medium">
+    <button id="mobile-navigation-toggle" class="nav-toggle rounded-md border border-gray-700 px-3 py-2 text-sm font-medium text-gray-100 hover:border-orange-400 md:hidden" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="primary-navigation" hidden>
+      Menu
+    </button>
+    <div id="primary-navigation" class="flex w-full flex-col gap-3 pt-4 text-sm font-medium md:w-auto md:flex-row md:items-center md:gap-6 md:pt-0">
       <a href="/" class="hover:text-orange-500 transition flex items-center gap-1">🏠 Home</a>
       <a href="/sobre.html" class="hover:text-orange-500 transition">Sobre</a>
       <a href="/experiencia.html" class="hover:text-orange-500 transition">Experiência</a>
@@ -14,3 +18,57 @@
     </div>
   </div>
 </nav>
+
+<script>
+  (() => {
+    const navigation = document.getElementById('primary-navigation');
+    const toggle = document.getElementById('mobile-navigation-toggle');
+    if (!navigation || !toggle) return;
+
+    const mobileViewport = window.matchMedia('(max-width: 767px)');
+    let isOpen = false;
+
+    function syncNavigation() {
+      const isMobile = mobileViewport.matches;
+      toggle.hidden = !isMobile;
+      navigation.hidden = isMobile && !isOpen;
+      toggle.setAttribute('aria-expanded', String(isMobile && isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+    }
+
+    toggle.addEventListener('click', () => {
+      isOpen = !isOpen;
+      syncNavigation();
+    });
+
+    navigation.addEventListener('click', (event) => {
+      if (mobileViewport.matches && event.target.closest('a')) {
+        isOpen = false;
+        syncNavigation();
+      }
+    });
+
+    navigation.parentElement.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && mobileViewport.matches && isOpen) {
+        isOpen = false;
+        syncNavigation();
+        toggle.focus();
+      }
+    });
+
+    mobileViewport.addEventListener('change', () => {
+      const focusWasInNavigation = navigation.contains(document.activeElement);
+      const focusWasOnToggle = document.activeElement === toggle;
+      isOpen = false;
+      syncNavigation();
+
+      if (mobileViewport.matches && focusWasInNavigation) toggle.focus();
+      if (!mobileViewport.matches && focusWasOnToggle) {
+        const firstLink = navigation.querySelector('a');
+        if (firstLink) firstLink.focus();
+      }
+    });
+
+    syncNavigation();
+  })();
+</script>

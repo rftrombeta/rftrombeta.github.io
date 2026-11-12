@@ -1,206 +1,163 @@
 <section id="arquitetura" class="py-20 bg-gray-800/30">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-4 text-center text-white">
+    <h1 class="text-3xl font-bold mb-4 text-center text-white">
       Estratégias de Arquitetura SDET
-    </h2>
+    </h1>
     <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-      Comparação técnica de abordagens arquiteturais implementadas, critérios de decisão e trade-offs de cada estratégia.
+      Abordagens para estruturar a automação de testes, considerando reutilização, manutenção, integração ao desenvolvimento e os trade-offs de cada decisão. Essas estratégias podem ser combinadas conforme o contexto e as necessidades do projeto.
     </p>
 
-    <!-- Grid de Estratégias -->
     <div class="grid md:grid-cols-3 gap-6 mb-16">
-      <!-- Co-location -->
-      <div class="bg-gray-900 rounded-xl p-6 border border-orange-500/30 hover:border-orange-500 transition-all">
-        <div class="flex items-center mb-4">
-          <span class="text-3xl mr-3">🔗</span>
-          <h3 class="text-xl font-bold text-orange-500">Co-location</h3>
+      <article class="rounded-xl border border-orange-500/30 bg-gray-900 p-6 transition-all hover:border-orange-500">
+        <div class="mb-4 flex items-center">
+          <span aria-hidden="true" class="mr-3 text-3xl">🔗</span>
+          <h2 class="text-xl font-bold text-orange-500">Co-location</h2>
         </div>
-        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
-          Testes e aplicação no mesmo repositório, com feedback instantâneo no ciclo de desenvolvimento.
+        <p class="mb-4 text-sm leading-relaxed text-gray-400">
+          Testes próximos ao código da aplicação, geralmente no mesmo repositório, favorecendo a evolução conjunta e a integração ao fluxo de desenvolvimento.
         </p>
-        <div class="space-y-2 mb-4">
-          <div class="flex items-start">
-            <span class="text-green-400 mr-2">✓</span>
-            <span class="text-xs text-gray-400">Feedback rápido</span>
-          </div>
-          <div class="flex items-start">
-            <span class="text-green-400 mr-2">✓</span>
-            <span class="text-xs text-gray-400">Evolução sincronizada</span>
-          </div>
-          <div class="flex items-start">
-            <span class="text-yellow-400 mr-2">△</span>
-            <span class="text-xs text-gray-400">Acoplamento intencional</span>
-          </div>
-        </div>
+        <ul class="mb-4 space-y-2 text-xs text-gray-400">
+          <li><span aria-hidden="true" class="mr-2 text-green-400">✓</span>Evolução conjunta com a aplicação.</li>
+          <li><span aria-hidden="true" class="mr-2 text-green-400">✓</span>Integração ao fluxo de desenvolvimento.</li>
+          <li><span aria-hidden="true" class="mr-2 text-yellow-400">△</span>Trade-off: Maior dependência da estrutura e do ciclo de mudanças da aplicação.</li>
+        </ul>
         <a href="https://github.com/rftrombeta/velo" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center text-orange-500 hover:text-orange-400 text-sm font-medium">
-          Ver projeto <span class="ml-1">→</span>
+           class="inline-flex items-center text-sm font-medium text-orange-500 hover:text-orange-400">
+          Ver projeto <span aria-hidden="true" class="ml-1">→</span>
         </a>
-      </div>
+      </article>
 
-      <!-- Shared Libraries -->
-      <div class="bg-gray-900 rounded-xl p-6 border border-blue-500/30 hover:border-blue-500 transition-all">
-        <div class="flex items-center mb-4">
-          <span class="text-3xl mr-3">🏗️</span>
-          <h3 class="text-xl font-bold text-blue-400">Shared Libraries</h3>
+      <article class="rounded-xl border border-blue-500/30 bg-gray-900 p-6 transition-all hover:border-blue-500">
+        <div class="mb-4 flex items-center">
+          <span aria-hidden="true" class="mr-3 text-3xl">🏗️</span>
+          <h2 class="text-xl font-bold text-blue-400">Shared Libraries</h2>
         </div>
-        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
-          Bibliotecas centralizadas versionadas, promovendo reúso e consistência entre múltiplos projetos.
+        <p class="mb-4 text-sm leading-relaxed text-gray-400">
+          Componentes de automação compartilhados e versionados, permitindo reutilização de funcionalidades e contratos entre diferentes projetos.
         </p>
-        <div class="space-y-2 mb-4">
-          <div class="flex items-start">
-            <span class="text-green-400 mr-2">✓</span>
-            <span class="text-xs text-gray-400">Reúso entre suítes</span>
-          </div>
-          <div class="flex items-start">
-            <span class="text-green-400 mr-2">✓</span>
-            <span class="text-xs text-gray-400">Contratos versionados</span>
-          </div>
-          <div class="flex items-start">
-            <span class="text-yellow-400 mr-2">△</span>
-            <span class="text-xs text-gray-400">Gestão de dependências</span>
-          </div>
-        </div>
+        <ul class="mb-4 space-y-2 text-xs text-gray-400">
+          <li><span aria-hidden="true" class="mr-2 text-green-400">✓</span>Reutilização entre projetos.</li>
+          <li><span aria-hidden="true" class="mr-2 text-green-400">✓</span>Consistência de componentes compartilhados.</li>
+          <li><span aria-hidden="true" class="mr-2 text-yellow-400">△</span>Trade-off: Gestão de versões, compatibilidade e evolução das dependências.</li>
+        </ul>
         <div class="flex gap-3 text-sm">
           <a href="https://github.com/rftrombeta/sdet-python-automation-core" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
-            Python Core <span class="ml-1">→</span>
+             class="inline-flex items-center font-medium text-blue-400 hover:text-blue-300">
+            Python Core <span aria-hidden="true" class="ml-1">→</span>
           </a>
           <a href="https://github.com/rftrombeta/sdet-typescript-automation-core" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
-            TS Core <span class="ml-1">→</span>
+             class="inline-flex items-center font-medium text-blue-400 hover:text-blue-300">
+            TS Core <span aria-hidden="true" class="ml-1">→</span>
           </a>
         </div>
-      </div>
+      </article>
 
-      <!-- Framework Modular -->
-      <div class="bg-gray-900 rounded-xl p-6 border border-emerald-500/30 hover:border-emerald-500 transition-all">
-        <div class="flex items-center mb-4">
-          <span class="text-3xl mr-3">🧩</span>
-          <h3 class="text-xl font-bold text-emerald-400">Framework Modular</h3>
+      <article class="rounded-xl border border-emerald-500/30 bg-gray-900 p-6 transition-all hover:border-emerald-500">
+        <div class="mb-4 flex items-center">
+          <span aria-hidden="true" class="mr-3 text-3xl">🧩</span>
+          <h2 class="text-xl font-bold text-emerald-400">Framework Modular</h2>
         </div>
-        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
-          Estrutura baseada em camadas (POM, helpers, fixtures) para escalabilidade e manutenção de longo prazo.
+        <p class="mb-4 text-sm leading-relaxed text-gray-400">
+          Organização da automação em componentes e camadas com responsabilidades definidas, favorecendo manutenção, testes e evolução.
         </p>
-        <div class="space-y-2 mb-4">
-          <div class="flex items-start">
-            <span class="text-green-400 mr-2">✓</span>
-            <span class="text-xs text-gray-400">Separação de camadas</span>
-          </div>
-          <div class="flex items-start">
-            <span class="text-green-400 mr-2">✓</span>
-            <span class="text-xs text-gray-400">Escalabilidade</span>
-          </div>
-          <div class="flex items-start">
-            <span class="text-yellow-400 mr-2">△</span>
-            <span class="text-xs text-gray-400">Overhead inicial</span>
-          </div>
-        </div>
+        <ul class="mb-4 space-y-2 text-xs text-gray-400">
+          <li><span aria-hidden="true" class="mr-2 text-green-400">✓</span>Separação de responsabilidades.</li>
+          <li><span aria-hidden="true" class="mr-2 text-green-400">✓</span>Evolução e manutenção dos componentes.</li>
+          <li><span aria-hidden="true" class="mr-2 text-yellow-400">△</span>Trade-off: Decisões estruturais e disciplina para evitar abstrações desnecessárias.</li>
+        </ul>
         <div class="flex gap-3 text-sm">
           <a href="https://github.com/rftrombeta/playwright-api-testing" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium">
-            POM <span class="ml-1">→</span>
+             class="inline-flex items-center font-medium text-emerald-400 hover:text-emerald-300">
+            POM <span aria-hidden="true" class="ml-1">→</span>
           </a>
           <a href="https://github.com/rftrombeta/playwright-cucumber-e2e-testing" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium">
-            BDD <span class="ml-1">→</span>
+             class="inline-flex items-center font-medium text-emerald-400 hover:text-emerald-300">
+            BDD <span aria-hidden="true" class="ml-1">→</span>
           </a>
         </div>
-      </div>
+      </article>
     </div>
 
-    <!-- Critérios de Decisão -->
-    <div class="bg-gray-900 rounded-xl p-8 border border-gray-800 mb-16">
-      <h3 class="text-2xl font-bold mb-6 text-white">Critérios de Decisão Arquitetural</h3>
-      
+    <div class="mb-16 rounded-xl border border-gray-800 bg-gray-900 p-8">
+      <h2 class="mb-2 text-2xl font-bold text-white">Critérios de Decisão Arquitetural</h2>
+      <p id="architecture-comparison-note" class="mb-4 text-sm text-gray-400">
+        Comparação orientativa: os resultados dependem do contexto, da implementação e das necessidades das equipes.
+      </p>
       <div class="overflow-x-auto">
-        <table class="w-full text-sm">
+        <table class="w-full text-sm" aria-describedby="architecture-comparison-note">
+          <caption class="sr-only">Comparação de benefícios, feedback, reutilização, cuidados e aplicações típicas das três abordagens arquiteturais.</caption>
           <thead>
             <tr class="border-b border-gray-800">
-              <th class="text-left py-3 px-4 text-gray-400 font-semibold">Critério</th>
-              <th class="text-center py-3 px-4 text-orange-500 font-semibold">Co-location</th>
-              <th class="text-center py-3 px-4 text-blue-400 font-semibold">Shared Libs</th>
-              <th class="text-center py-3 px-4 text-emerald-400 font-semibold">Modular</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-400">Critério</th>
+              <th scope="col" class="px-4 py-3 text-center font-semibold text-orange-500">Co-location</th>
+              <th scope="col" class="px-4 py-3 text-center font-semibold text-blue-400">Shared Libraries</th>
+              <th scope="col" class="px-4 py-3 text-center font-semibold text-emerald-400">Framework Modular</th>
             </tr>
           </thead>
           <tbody class="text-gray-300">
             <tr class="border-b border-gray-800/50">
-              <td class="py-3 px-4">Velocidade de feedback</td>
-              <td class="text-center py-3 px-4">🟢 Alta</td>
-              <td class="text-center py-3 px-4">🟡 Média</td>
-              <td class="text-center py-3 px-4">🟡 Média</td>
+              <th scope="row" class="px-4 py-3 text-left font-medium">Principal benefício</th>
+              <td class="px-4 py-3">Evolução conjunta com a aplicação.</td>
+              <td class="px-4 py-3">Reutilização entre projetos.</td>
+              <td class="px-4 py-3">Separação de responsabilidades.</td>
             </tr>
             <tr class="border-b border-gray-800/50">
-              <td class="py-3 px-4">Reúso entre projetos</td>
-              <td class="text-center py-3 px-4">🔴 Baixo</td>
-              <td class="text-center py-3 px-4">🟢 Alto</td>
-              <td class="text-center py-3 px-4">🟡 Médio</td>
+              <th scope="row" class="px-4 py-3 text-left font-medium">Feedback</th>
+              <td class="px-4 py-3">Favorece integração ao fluxo de desenvolvimento.</td>
+              <td class="px-4 py-3">Depende das suítes consumidoras.</td>
+              <td class="px-4 py-3">Depende da execução e do pipeline.</td>
             </tr>
             <tr class="border-b border-gray-800/50">
-              <td class="py-3 px-4">Complexidade setup</td>
-              <td class="text-center py-3 px-4">🟢 Baixa</td>
-              <td class="text-center py-3 px-4">🟡 Média</td>
-              <td class="text-center py-3 px-4">🔴 Alta</td>
+              <th scope="row" class="px-4 py-3 text-left font-medium">Reutilização</th>
+              <td class="px-4 py-3">Predominantemente local.</td>
+              <td class="px-4 py-3">Compartilhada entre projetos.</td>
+              <td class="px-4 py-3">Entre componentes e módulos.</td>
             </tr>
             <tr class="border-b border-gray-800/50">
-              <td class="py-3 px-4">Manutenibilidade longo prazo</td>
-              <td class="text-center py-3 px-4">🟡 Média</td>
-              <td class="text-center py-3 px-4">🟢 Alta</td>
-              <td class="text-center py-3 px-4">🟢 Alta</td>
-            </tr>
-            <tr class="border-b border-gray-800/50">
-              <td class="py-3 px-4">Indicado para times distribuídos</td>
-              <td class="text-center py-3 px-4">🔴 Não</td>
-              <td class="text-center py-3 px-4">🟢 Sim</td>
-              <td class="text-center py-3 px-4">🟢 Sim</td>
+              <th scope="row" class="px-4 py-3 text-left font-medium">Principal cuidado</th>
+              <td class="px-4 py-3">Acoplamento ao ciclo da aplicação.</td>
+              <td class="px-4 py-3">Versionamento e compatibilidade.</td>
+              <td class="px-4 py-3">Complexidade das abstrações.</td>
             </tr>
             <tr>
-              <td class="py-3 px-4">Acoplamento</td>
-              <td class="text-center py-3 px-4">🟡 Intencional</td>
-              <td class="text-center py-3 px-4">🟢 Desacoplado</td>
-              <td class="text-center py-3 px-4">🟢 Desacoplado</td>
+              <th scope="row" class="px-4 py-3 text-left font-medium">Aplicação típica</th>
+              <td class="px-4 py-3">Testes próximos ao produto.</td>
+              <td class="px-4 py-3">Múltiplas suítes com necessidades comuns.</td>
+              <td class="px-4 py-3">Suítes que exigem organização e manutenção.</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
 
-    <!-- Quando usar cada uma -->
-    <div class="bg-gray-900 rounded-xl p-8 border border-gray-800">
-      <h3 class="text-2xl font-bold mb-6 text-white">Quando Usar Cada Estratégia</h3>
-      
+    <div class="rounded-xl border border-gray-800 bg-gray-900 p-8">
+      <h2 class="mb-4 text-2xl font-bold text-white">Quando Usar Cada Estratégia</h2>
+      <p class="mb-6 text-sm text-gray-400">
+        As abordagens podem coexistir: por exemplo, testes próximos ao produto podem consumir bibliotecas compartilhadas e ser organizados em módulos.
+      </p>
       <div class="space-y-6">
         <div>
-          <h4 class="text-lg font-semibold text-orange-500 mb-2">🔗 Co-location</h4>
-          <ul class="text-gray-400 text-sm space-y-1 ml-6 list-disc">
-            <li>Produtos com equipe única (dev + QA integrados)</li>
-            <li>Alta frequência de mudanças na interface/contrato</li>
-            <li>Necessidade de validação em tempo de desenvolvimento</li>
-            <li>Startups ou squads autônomos com ciclo rápido</li>
+          <h3 class="mb-2 text-lg font-semibold text-orange-500"><span aria-hidden="true">🔗 </span>Co-location</h3>
+          <ul class="ml-6 list-disc space-y-1 text-sm text-gray-400">
+            <li>Pode ser adequada quando testes e aplicação evoluem em conjunto ou quando se busca integração ao fluxo de desenvolvimento.</li>
+            <li>Manter testes próximos ao código não exige que as equipes estejam no mesmo local e não impede equipes distribuídas.</li>
           </ul>
         </div>
-
         <div>
-          <h4 class="text-lg font-semibold text-blue-400 mb-2">🏗️ Shared Libraries</h4>
-          <ul class="text-gray-400 text-sm space-y-1 ml-6 list-disc">
-            <li>Múltiplas suítes de teste consumindo mesma lógica</li>
-            <li>Contratos estáveis que precisam ser reutilizados</li>
-            <li>Times distribuídos com necessidade de consistência</li>
-            <li>Ecossistema maduro com alto volume de automação</li>
+          <h3 class="mb-2 text-lg font-semibold text-blue-400"><span aria-hidden="true">🏗️ </span>Shared Libraries</h3>
+          <ul class="ml-6 list-disc space-y-1 text-sm text-gray-400">
+            <li>Podem ser úteis quando diferentes suítes precisam reutilizar componentes ou contratos comuns.</li>
+            <li>O compartilhamento não elimina completamente o acoplamento; versões, compatibilidade e ciclo de evolução continuam relevantes.</li>
           </ul>
         </div>
-
         <div>
-          <h4 class="text-lg font-semibold text-emerald-400 mb-2">🧩 Framework Modular</h4>
-          <ul class="text-gray-400 text-sm space-y-1 ml-6 list-disc">
-            <li>Projetos de longo prazo com alta complexidade</li>
-            <li>Necessidade de separação clara entre camadas</li>
-            <li>Ambiente regulado com auditoria de cobertura</li>
-            <li>Suítes E2E ou de regressão extensas</li>
+          <h3 class="mb-2 text-lg font-semibold text-emerald-400"><span aria-hidden="true">🧩 </span>Framework Modular</h3>
+          <ul class="ml-6 list-disc space-y-1 text-sm text-gray-400">
+            <li>Pode ajudar quando a separação de responsabilidades facilita a manutenção e a evolução da suíte.</li>
+            <li>A modularidade não exige necessariamente infraestrutura complexa; a estrutura pode acompanhar as necessidades do projeto.</li>
           </ul>
         </div>
       </div>
     </div>
-
   </div>
 </section>

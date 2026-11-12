@@ -170,6 +170,91 @@ body {
     margin: 0 auto;
 }
 
+/* Preserva o espaçamento inicial após mover as páginas legadas para main. */
+nav.site-navigation + script + main.legacy-main > :first-child,
+nav.site-navigation + script + main:not(.legacy-main) {
+    padding-top: 1.5rem;
+}
+
+/* Skip link disponível ao foco por teclado sem alterar a apresentação normal. */
+.skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 60;
+    transform: translateY(calc(-100% - 1rem));
+    border-radius: 0.375rem;
+    background: #fff;
+    padding: 0.75rem 1rem;
+    color: #111827;
+    font-weight: 600;
+}
+
+.skip-link:focus-visible {
+    transform: translateY(0);
+    outline: 3px solid #fdba74;
+    outline-offset: 3px;
+}
+
+/* Mantém destinos de âncora abaixo do cabeçalho sticky. */
+:target {
+    scroll-margin-top: 6rem;
+}
+
+/* Mantém controles recolhidos fora da árvore visual e de foco. */
+#primary-navigation[hidden],
+.nav-toggle[hidden] {
+    display: none !important;
+}
+
+.cert-dialog:not([open]) {
+    display: none;
+}
+
+.cert-dialog[open] {
+    display: flex;
+}
+
+.project-lightbox:not([open]) {
+    display: none;
+}
+
+.project-lightbox[open] {
+    display: flex;
+}
+
+.project-thumbnail-trigger {
+    left: 1px;
+    top: 1px;
+    width: calc(100% - 2px);
+    aspect-ratio: 1024 / 878;
+}
+
+@media (min-width: 640px) {
+    .project-thumbnail-trigger {
+        width: 14rem;
+        height: 12rem;
+        aspect-ratio: auto;
+    }
+}
+
+.cert-preview-trigger:focus-visible,
+.cert-dialog button:focus-visible,
+.project-thumbnail-trigger:focus-visible,
+.project-lightbox button:focus-visible {
+    outline: 3px solid #fdba74;
+    outline-offset: 3px;
+}
+
+/* Foco por teclado visível em links e no acionador do menu mobile. */
+section#projetos a:focus-visible,
+section#arquitetura a:focus-visible,
+section#contato a:focus-visible,
+.nav-toggle:focus-visible {
+    outline: 3px solid #fdba74;
+    outline-offset: 3px;
+}
+
 .badge-soon {
     background: #f39c12;
     color: #000;
@@ -189,7 +274,6 @@ section#contato a {
     text-decoration-skip-ink: none !important;
     text-decoration-line: none !important;
     border-bottom: none !important;
-    outline: none !important;
 }
 
 /* Todos os pseudo-estados */
